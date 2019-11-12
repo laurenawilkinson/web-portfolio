@@ -124,7 +124,13 @@
             <div class="flex-col">
               <ul class="btn-list">
                 <li v-for="link in contactLinks" :key="link.url">
-                  <a class="btn btn--primary btn--outline" :href="link.url">{{ link.name }}</a>
+                  <a 
+                    class="btn btn--primary btn--outline" 
+                    :href="link.url" 
+                    target="_blank" 
+                    rel="noreferrer">
+                    {{ link.name }}
+                  </a>
                 </li>
               </ul>
             </div>    

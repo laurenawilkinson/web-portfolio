@@ -1,0 +1,79 @@
+.btn {
+    border: 3px solid;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: background-color 0.25s ease-out,
+        border-radius 0.25s ease-out;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+
+    &:hover,
+    &:focus {
+      &:not(.disabled),
+      &:not(:disabled) {
+        border-radius: 20px 0;
+        outline: 0;
+      }
+    }
+
+    &--primary {
+        background-color: $secondary;
+        border-color: $secondary;
+        color: $body-color;
+    }
+
+    &--large {
+        padding: 1rem 2rem;
+    }
+
+    &--outline {
+        border: 3px solid $secondary-light;
+        background-color: transparent;
+        color: $secondary;
+
+        &:hover,
+        &.active {
+          &:not(.disabled),
+          &:not(:disabled) {
+            background-color: $secondary-light;
+            color: $body-color;
+          }
+        }
+    }
+
+    &:disabled,
+    &.disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+}
+
+.btn-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  li {
+    + li {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  &--inline {
+    flex-direction: row;
+    display: inline-flex;
+
+    li + li {
+      margin-top: 0;
+      margin-left: 1.5rem;
+    }
+  }
+}

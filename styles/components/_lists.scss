@@ -1,0 +1,16 @@
+.list {
+    &--inline {
+        display: flex;
+        list-style: none;
+    }
+}
+
+.icon-list {
+  font-size: 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  li:not(:last-child) {
+    margin-right: 2rem;
+  }
+}

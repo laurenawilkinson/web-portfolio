@@ -1,0 +1,78 @@
+.card {
+  background-color: #474c58; // blacker: #2d2f35
+  color: white;
+  width: 100%;
+  border-radius: 20px;
+  padding: 6rem 9rem;
+  //border: 0.5rem solid $primary;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &--project {
+    padding: 0 !important;
+    flex-direction: row;
+
+    .img-container,
+    .card-body {
+      width: 50%;
+    }
+
+    .img-container {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+
+      .img {
+        width: 100%;
+
+        @include breakpoint-up('md') {
+          width: auto; 
+          flex: 1;
+          height: 330px;
+        }
+          
+      }
+    }
+
+    @include breakpoint-down('md') {
+      flex-direction: column;
+
+      &,
+      &:hover {
+        .img-container,
+        .card-body {
+          width: 100%;
+        }
+      }
+    }
+
+    + .card--project {
+      margin-top: 5rem;
+    }
+  }
+
+  &.flex-row {
+    flex-direction: row;
+
+    @include breakpoint-down('md') {
+      flex-direction: column;
+
+      .flex-col {
+        margin-left: 0;
+
+        + .flex-col {
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+
+  &-body {
+    padding: 3rem;
+  }
+
+  @include breakpoint-down('md') {
+    padding: 3rem;
+  }
+}

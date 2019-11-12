@@ -1,0 +1,16 @@
+.footer {
+  padding: 3rem 0;
+  @include gradient;
+  color: $body-color;
+  font-weight: 500;
+
+  a {
+    color: $body-color;
+    transition: color 0.25s ease-out;
+
+    &:hover,
+    &:focus {
+      color: $primary-dark;
+    }
+  }
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lauren Wilkinson | Web Developer & UI Designer</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.min.css">
+  <script src="https://kit.fontawesome.com/ddad75a954.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="app">
+    <header class="header">
+        <div class="container">
+            <nav>
+                <ul class="header__nav list--inline">
+                    <li class="header__nav-item" v-for="link in navLinks" :key="link.url">
+                        <a class="header__nav-link" :href="link.url">{{ link.name }}</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content">
+      <section id="top" class="section section--large">
+        <div class="container">
+          <h1 class="main-heading">Lauren Wilkinson</h1>
+          <h2 class="sub-heading">
+              <span>Front-End Web Developer &</span>
+              <span>UI Designer</span>
+          </h2>
+          <a 
+              class="btn btn--primary btn--large"
+              href="#projects">
+              View Projects
+          </a>
+        </div>
+      </section>
+      <section id="about" class="section">
+        <div class="container">
+          <div class="card">
+              <h2 class="main-heading">Hi, I'm Lauren.</h2>
+              <p>
+                I'm a final year <interactive>Web Development</interactive> student based in 
+                Stoke-on-Trent. Designing and implementing beautiful UI is what I 
+                enjoy most, as well as building a fulfilling user experience.
+              </p>
+              <p>
+                When I'm not working, I'm likely either playing <interactive>video games</interactive> or 
+                <interactive>drawing</interactive>. My non-work related 
+                lifetime goals are to learn as many foreign languages as possible, 
+                and to adopt all the kittens!
+              </p>
+              <h3 class="sub-heading">Technologies</h3>
+              <ul class="icon-list list--inline">
+                <li v-for="tech in technologies" :key="tech.name" :title="tech.name">
+                  <i :class="tech.icon"></i>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div id="projects" class="header header--sticky">
+            <h2 class="main-heading">Projects</h2>
+            <ul class="btn-list btn-list--inline">
+              <li>
+                <button 
+                  :class="{ 'btn btn--secondary btn--outline': true, active: showUiDesign }" 
+                  @click="showUiDesign ? deactivateType('Ui Design') : activateType('Ui Design')">
+                  Ui Design
+                </button>
+              </li>
+              <li>
+                <button 
+                  :class="{ 'btn btn--secondary btn--outline': true, active: showDevelopment }" 
+                  @click="showDevelopment ? deactivateType('Development') : activateType('Development')">
+                  Development
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div v-for="card in projects" :key="card.name" class="card card--project">
+            <div class="img-container">
+              <img class="img" :src="card.img" :alt="card.name" />
+            </div>
+            <div class="card-body">
+              <h2 class="main-heading">{{ card.name }}</h2>
+              <h3 class="sub-heading">{{ card.type }}</h3>
+              <p>{{ card.description }}</p>
+              <ul v-if="card.links" class="btn-list btn-list--inline">
+                <li v-for="link in card.links" :key="link.name">
+                  <a 
+                    v-if="link.url" 
+                    class="btn btn--secondary btn--outline"
+                    :href="link.url"
+                    target="_blank" 
+                    rel="noreferrer">
+                    {{ link.name }}
+                  </a>
+                  <button 
+                    v-else 
+                    class="btn btn--secondary btn--outline disabled"
+                    disabled="disabled"
+                    title="Gallery coming soon!">
+                    {{ link.name }}
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="card flex-row">
+            <div class="flex-col">
+              <h2 class="main-heading">Want to get in touch?</h2>
+              <p>I am currently not looking for a full-time position, but I am open for freelance work and would love to contribute to open source projects.</p>
+              <span class="interactive"><hidden-email></hidden-email></span>
+            </div>
+            <div class="flex-col">
+              <ul class="btn-list">
+                <li v-for="link in contactLinks" :key="link.url">
+                  <a class="btn btn--primary btn--outline" :href="link.url">{{ link.name }}</a>
+                </li>
+              </ul>
+            </div>    
+          </div>
+        </div>
+      </section>
+      <img src="../assets/images/blob.svg" class="blob" />
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <hidden-email></hidden-email>
+                <ul class="icon-list list--inline">
+                    <li
+                        v-for="link of contactLinks" 
+                        :key="link.name">
+                        <a :href="link.url" target="_blank" rel="noreferrer" :title="link.name">
+                            <i :class="link.icon"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>

@@ -177,6 +177,30 @@ p + * {
   position: relative;
 }
 
+.header__nav-link::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  top: 0.3em;
+  right: 0;
+  width: 0;
+  height: 1em;
+  background-color: rgba(255, 188, 101, 0.4);
+  z-index: -1;
+  -webkit-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+}
+
+.header__nav-link:hover, .header__nav-link:focus {
+  outline: 0;
+}
+
+.header__nav-link:hover::after, .header__nav-link:focus::after {
+  left: 0;
+  width: 100%;
+}
+
 .list--inline {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -354,11 +378,16 @@ p + * {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.btn-list--inline li:not(:last-child) {
+  margin-right: 1.5rem;
 }
 
 .btn-list--inline li + li {
   margin-top: 0;
-  margin-left: 1.5rem;
 }
 
 .card {

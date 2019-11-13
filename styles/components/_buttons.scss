@@ -70,10 +70,17 @@
   &--inline {
     flex-direction: row;
     display: inline-flex;
+    flex-wrap: wrap;
 
-    li + li {
-      margin-top: 0;
-      margin-left: 1.5rem;
+    li {
+
+      &:not(:last-child){
+        margin-right: 1.5rem;
+      }
+
+      + li {
+        margin-top: 0;
+      }
     }
   }
 }

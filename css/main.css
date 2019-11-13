@@ -129,6 +129,15 @@ p + * {
   font-weight: 500;
 }
 
+@media (max-width: 800px) {
+  .footer .d-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .footer a {
   color: #37393e;
   -webkit-transition: color 0.25s ease-out;
@@ -152,6 +161,12 @@ p + * {
 
 .header__nav-item {
   padding: 0 4rem;
+}
+
+@media (max-width: 800px) {
+  .header__nav-item {
+    padding: 0 2rem;
+  }
 }
 
 .header__nav-link {
@@ -387,6 +402,7 @@ p + * {
 
 .card--project .img-container .img {
   width: 100%;
+  height: auto;
 }
 
 @media (min-width: 800px) {

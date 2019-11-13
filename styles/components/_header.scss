@@ -7,6 +7,10 @@
 
         &-item {
             padding: 0 4rem;
+
+            @include breakpoint-down('md') {
+              padding: 0 2rem;
+            }
         }
 
         &-link {

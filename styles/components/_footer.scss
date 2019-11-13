@@ -4,6 +4,12 @@
   color: $body-color;
   font-weight: 500;
 
+  .d-flex {
+    @include breakpoint-down('md') {
+      flex-direction: column;
+    }
+  }
+
   a {
     color: $body-color;
     transition: color 0.25s ease-out;

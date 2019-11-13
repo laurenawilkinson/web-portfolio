@@ -25,6 +25,7 @@
 
       .img {
         width: 100%;
+        height: auto;
 
         @include breakpoint-up('md') {
           width: auto; 

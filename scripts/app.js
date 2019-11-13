@@ -41,7 +41,7 @@ var app = new Vue({
       {
         name: 'Ellie Wilkinson Portfolio',
         type: 'Development',
-        description: 'A technical portfolio website designed and built for a technical production student.',
+        description: 'A portfolio website designed and built for a technical production student.',
         links: [
           { name: 'Code', url: 'https://github.com/laurenawilkinson/ellie-wilkinson' },
           { name: 'Demo', url: 'https://elliewilkinson.netlify.com/' }

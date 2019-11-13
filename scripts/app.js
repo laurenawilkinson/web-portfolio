@@ -39,6 +39,16 @@ var app = new Vue({
         img: 'assets/images/projects/Transhaping.png'
       },
       {
+        name: 'Ellie Wilkinson Portfolio',
+        type: 'Development',
+        description: 'A technical portfolio website designed and built for a technical production student.',
+        links: [
+          { name: 'Code', url: 'https://github.com/laurenawilkinson/ellie-wilkinson' },
+          { name: 'Demo', url: 'https://elliewilkinson.netlify.com/' }
+        ],
+        img: 'assets/images/projects/ElliePortfolio.png'
+      },
+      {
         name: 'Cat Adoption',
         type: 'Development',
         description: 'A simple virtual pet game written in vanilla JavaScript, incorporating ES6 features.',

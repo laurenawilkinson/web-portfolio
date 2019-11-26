@@ -40,3 +40,7 @@ body {
     text-shadow: 3px 3px 3px $body-color;
   }
 }
+
+[v-cloak] {
+  display: none;
+}

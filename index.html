@@ -15,7 +15,11 @@
         <div class="container">
             <nav>
                 <ul class="header__nav list--inline">
-                    <li class="header__nav-item" v-for="link in navLinks" :key="link.url">
+                    <li 
+                      v-cloak
+                      class="header__nav-item" 
+                      v-for="link in navLinks" 
+                      :key="link.url">
                         <a class="header__nav-link" :href="link.url">{{ link.name }}</a>
                     </li>
                 </ul>
@@ -54,8 +58,10 @@
               </p>
               <h3 class="sub-heading">Technologies</h3>
               <ul class="icon-list list--inline">
-                <li v-for="tech in technologies" :key="tech.name" :title="tech.name">
-                  <i :class="tech.icon"></i>
+                <li v-for="tech in technologies" :key="tech.name">
+                  <span :data-tooltip="tech.name">
+                    <i :class="tech.icon"></i>
+                  </span>
                 </li>
               </ul>
           </div>
@@ -104,7 +110,7 @@
                     v-else 
                     class="btn btn--secondary btn--outline disabled"
                     disabled="disabled"
-                    title="Gallery coming soon!">
+                    data-tooltip="Gallery coming soon!">
                     {{ link.name }}
                   </button>
                 </li>
@@ -147,7 +153,7 @@
                     <li
                         v-for="link of contactLinks" 
                         :key="link.name">
-                        <a :href="link.url" target="_blank" rel="noreferrer" :title="link.name">
+                        <a :href="link.url" target="_blank" rel="noreferrer" :data-tooltip="link.name">
                             <i :class="link.icon"></i>
                         </a>
                     </li>

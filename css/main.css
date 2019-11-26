@@ -40,6 +40,10 @@ body {
   text-shadow: 3px 3px 3px #37393e;
 }
 
+[v-cloak] {
+  display: none;
+}
+
 .container {
   width: 100%;
   padding: 0 20%;
@@ -504,4 +508,38 @@ p + * {
   font-weight: 500;
   color: #FFBC65;
   cursor: default;
+}
+
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]::before {
+  content: attr(data-tooltip);
+  font-size: 1.4rem;
+  background-color: rgba(55, 57, 62, 0.8);
+  opacity: 0;
+  padding: 1rem 1.5rem;
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+  z-index: 10;
+  -webkit-transform: translate(-50%, 1rem);
+          transform: translate(-50%, 1rem);
+  -webkit-transition: opacity 0.25s ease-out, -webkit-transform 0.25s ease-out;
+  transition: opacity 0.25s ease-out, -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+  transition: transform 0.25s ease-out, opacity 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+[data-tooltip]:hover::before {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 3rem);
+          transform: translate(-50%, 3rem);
 }

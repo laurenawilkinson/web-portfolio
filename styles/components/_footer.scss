@@ -13,6 +13,7 @@
   a {
     color: $body-color;
     transition: color 0.25s ease-out;
+    border-bottom: 0;
 
     &:hover,
     &:focus {

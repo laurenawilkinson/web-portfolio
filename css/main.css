@@ -165,6 +165,7 @@ p + * {
   color: #37393e;
   -webkit-transition: color 0.25s ease-out;
   transition: color 0.25s ease-out;
+  border-bottom: 0;
 }
 
 .footer a:hover, .footer a:focus {

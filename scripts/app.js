@@ -34,8 +34,7 @@ var app = new Vue({
         description: 'A website designed and built for the indie game development company, Unbound Interactive.',
         links: [
           { name: 'Code', url: 'https://github.com/laurenawilkinson/unboundinteractive' },
-          { name: 'Demo', url: 'https://lwunboundinteractive.netlify.com/' },
-          { name: 'Gallery', images: [] }
+          { name: 'Demo', url: 'https://lwunboundinteractive.netlify.com/' }
         ],
         img: 'assets/images/projects/Transhaping.png'
       },

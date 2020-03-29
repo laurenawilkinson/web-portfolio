@@ -13,7 +13,7 @@
     margin: auto;
     width: fit-content;
     white-space: nowrap;
-    z-index: 10;
+    z-index: -1;
     transform: translate(-50%, 1rem);
     transition: transform 0.25s ease-out,
      opacity 0.25s ease-out;
@@ -22,7 +22,8 @@
   &:hover{
     &::before {
       opacity: 1;
-      transform: translate(-50%, 3rem);
+      transform: translate(-50%, 4rem);
+      z-index: 10;
     }
   }
 }

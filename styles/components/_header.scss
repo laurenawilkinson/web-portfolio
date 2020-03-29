@@ -19,6 +19,7 @@
             color: $secondary;
             font-weight: 600;
             position: relative;
+            border-bottom: 0;
 
             &::after {
                 content: '';

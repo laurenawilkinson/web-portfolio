@@ -3,6 +3,12 @@
         display: flex;
         list-style: none;
     }
+    
+    &--tech {
+      li:not(:last-child) {
+        margin-right: 3rem;
+      }
+    }
 }
 
 .icon-list {

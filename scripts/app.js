@@ -1,6 +1,6 @@
 Vue.component('hidden-email', {
   template: `
-    <span>&#108;&#097;&#117;&#114;&#101;&#110;&#097;&#101;&#114;&#111;&#110;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</span>
+    <a href="mailto:laurenaeron@gmail.com">&#108;&#097;&#117;&#114;&#101;&#110;&#097;&#101;&#114;&#111;&#110;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</a>
   `
 })
 Vue.component('interactive', {
@@ -22,6 +22,7 @@ var app = new Vue({
       { name: 'JavaScript', icon: 'fab fa-js-square' },
       { name: 'NodeJS', icon: 'fab fa-node-js' },
       { name: 'VueJS', icon: 'fab fa-vuejs' },
+      { name: 'Wordpress', icon: 'fab fa-wordpress'},
       { name: 'Adobe Photoshop, Adobe XD', icon: 'fab fa-adobe' },
       { name: 'Bootstrap', icon: 'fab fa-bootstrap' },
       { name: 'Git, Github', icon: 'fab fa-git-alt' }
@@ -63,7 +64,7 @@ var app = new Vue({
         type: 'Ui Design',
         description: 'An ecommerce website I designed for a fictional bakery.',
         links: [
-          { name: 'Gallery', images: [] }
+          { name: 'View on Dribbble', url: 'https://dribbble.com/shots/6680498-Minimalist-Bakery-Ecommerce-Website' }
         ],
         img: 'assets/images/projects/Bontas.png'
       }
@@ -92,11 +93,6 @@ var app = new Vue({
         name: 'Github',
         url: 'https://github.com/laurenawilkinson',
         icon: 'fab fa-github'
-      },
-      {
-        name: 'Codepen',
-        url: 'https://codepen.io/lawilkinson',
-        icon: 'fab fa-codepen'
       },
       {
         name: 'Linkedin',

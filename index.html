@@ -66,7 +66,7 @@
                 and to adopt all the kittens!
               </p>
               <h3 class="sub-heading">Technologies</h3>
-              <ul class="icon-list list--inline">
+              <ul class="icon-list list--inline list--tech">
                 <li v-for="tech in technologies" :key="tech.name">
                   <span :data-tooltip="tech.name">
                     <i :class="tech.icon"></i>
@@ -102,7 +102,7 @@
               <img class="img" :src="card.img" :alt="card.name" />
             </div>
             <div class="card-body">
-              <h2 class="main-heading">{{ card.name }}</h2>
+              <h2 class="secondary-heading">{{ card.name }}</h2>
               <h3 class="sub-heading">{{ card.type }}</h3>
               <p>{{ card.description }}</p>
               <ul v-if="card.links" class="btn-list btn-list--inline">
@@ -133,7 +133,7 @@
           <div class="card flex-row">
             <div class="flex-col">
               <h2 class="main-heading">Want to get in touch?</h2>
-              <p>I am currently not looking for a full-time position, but I am open for freelance work and would love to contribute to open source projects.</p>
+              <p>While I am currently not looking for a full-time position, I am open to freelance work, contributing to open source projects and other opportunities.</p>
               <span class="interactive"><hidden-email></hidden-email></span>
             </div>
             <div class="flex-col">
@@ -162,7 +162,7 @@
                     <li
                         v-for="link of contactLinks" 
                         :key="link.name">
-                        <a :href="link.url" target="_blank" rel="noreferrer" :data-tooltip="link.name">
+                        <a :href="link.url" target="_blank" rel="noreferrer">
                             <i :class="link.icon"></i>
                         </a>
                     </li>

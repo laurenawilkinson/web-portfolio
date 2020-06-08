@@ -2,10 +2,10 @@
     display: flex;
 
     &--large {
+      min-height: 50vh;
+      
+      @include breakpoint-up('lg') {
         min-height: 90vh;
-
-        @media (max-width: 1250px) {
-          min-height: 50vh;
         }
     }
 

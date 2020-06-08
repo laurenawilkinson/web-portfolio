@@ -8,16 +8,24 @@ $secondary-dark: #B94400;
 
 $gradient: linear-gradient(130deg, $secondary 0%, $primary 100%);
 
-$body-color: #37393e;
+$grey-500: #757b8d;
+$grey-600: #636979;
+$grey-700: #474c58;
+$grey-800: #37393e;
+
+$body-color: $grey-800;
 $body-alt-color: #fff;
 
 $body-font: 'Poppins', 'Helvetica', 'Arial', sans-serif;
 $heading-font: $body-font;
 
+$label-font-size: 1.6rem;
 $body-font-size: 1.8rem;
 $heading-1-font-size: 5rem;
 $heading-2-font-size: 3rem;
 $subheading-font-size: 2.2rem;
+
+$border-radius: 5px;
 
 @mixin gradient {
     background: $secondary;

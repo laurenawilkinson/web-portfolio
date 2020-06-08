@@ -55,7 +55,7 @@
           <div class="card">
               <h2 class="main-heading">Hi, I'm Lauren.</h2>
               <p>
-                I'm a final year <interactive>Web Development</interactive> student based in 
+                I'm a final year <interactive>Web Development</interactive> student currently based in 
                 Stoke-on-Trent. Designing and implementing beautiful yet usability-focused UI is what I 
                 enjoy most, with the ultimate goal of creating a fulfilling user experience.
               </p>
@@ -133,11 +133,8 @@
           <div class="card flex-row">
             <div class="flex-col">
               <h2 class="main-heading">Want to get in touch?</h2>
-              <p>I am available for a full-time position either working remotely or in the South East, East Anglia or Midlands. Feel free to contact me using the email below!</p>
-              <span class="interactive"><hidden-email></hidden-email></span>
-            </div>
-            <div class="flex-col">
-              <ul class="btn-list">
+              <p>I am available for a full-time position either working remotely or in South East England, East Anglia or the Midlands. Feel free to contact me via <a href="mailto:laurenaeron@gmail.com">email</a> or the form!</p>
+              <ul class="btn-list btn-list--inline">
                 <li v-for="link in contactLinks" :key="link.url">
                   <a 
                     class="btn btn--primary btn--outline" 
@@ -148,6 +145,39 @@
                   </a>
                 </li>
               </ul>
+            </div>
+            <div class="flex-col">
+              <form name="contact" method="POST" data-netlify="true" class="form">
+                <div class="form-row">
+                  <label class="form-label form-label--inline">
+                    Name
+                    <input class="form-control" type="text" name="name" />
+                  </label>
+                  <label class="form-label form-label--inline">
+                    Email
+                    <input class="form-control" type="email" name="email" />
+                  </label>
+                </div>
+                <div class="form-row">
+                  <label class="form-label">
+                    Subject
+                    <select class="form-control" name="subject">
+                      <option value="job">Job Opportunity</option>
+                      <option value="client">Client Proposal</option>
+                      <option value="other">Other Enquiry</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="form-row">
+                  <label class="form-label">
+                    Message
+                    <textarea class="form-control" name="message" rows="3"></textarea>
+                  </label>
+                </div>
+                <div class="form-row">
+                  <button type="submit" class="btn btn--primary btn--block">Send</button>
+                </div>
+              </form>
             </div>    
           </div>
         </div>

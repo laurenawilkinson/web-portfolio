@@ -105,6 +105,7 @@
               <h2 class="secondary-heading">{{ card.name }}</h2>
               <h3 class="sub-heading">{{ card.type }}</h3>
               <p>{{ card.description }}</p>
+              <p class="note" v-if="card.note">{{ card.note }}</p>
               <ul v-if="card.links" class="btn-list btn-list--inline">
                 <li v-for="link in card.links" :key="link.name">
                   <a 

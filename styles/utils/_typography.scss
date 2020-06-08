@@ -27,7 +27,7 @@
 .sub-heading {
     font-size: 2rem;
     color: $primary-light;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 
     > span {
         display: block;
@@ -38,7 +38,17 @@
 p {
   line-height: 1.7;
   + * {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     display: inline-block;
   }
+
+  + .note {
+    margin-top: 1rem;
+  }
+}
+
+.note {
+  font-size: 1.4rem;
+  color: $grey-100;
+  font-weight: bold;
 }

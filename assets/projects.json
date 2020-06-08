@@ -2,12 +2,23 @@
   {
     "name": "Digital Bullet Journal",
     "type": "Development",
-    "description": "A PWA made for my Final Year Project that aims to capture the user experience of the paper-based Bullet Journal planning system digitally.",
+    "description": "A PWA made for my Final Year Project, that aims to capture the user experience of the paper-based Bullet Journal planning system digitally.",
     "links": [
       { "name": "Code", "url": "https://github.com/laurenawilkinson/bullet-journal" },
       { "name": "Demo", "url": "https://lw-bullet-journal.netlify.app/" }
     ],
     "img": "assets/images/projects/DigitalBulletJournal.png"
+  },
+  {
+    "name": "McIntire Fruit",
+    "type": "Development",
+    "description": "A site designed and developed for a fictional organic fruit-and-veg company, using Vue and Wordpress API.",
+    "note": "Wordpress API is currently unhosted, so products will not be available at this time.",
+    "links": [
+      { "name": "Code", "url": "https://github.com/laurenawilkinson/mcintire-fruit" },
+      { "name": "Demo", "url": "https://lw-mcintire-fruit.netlify.app/" }
+    ],
+    "img": "assets/images/projects/McintireFruit.png"
   },
   {
     "name": "Unbound Interactive",

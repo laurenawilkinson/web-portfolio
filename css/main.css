@@ -182,7 +182,7 @@ a {
 .sub-heading {
   font-size: 2rem;
   color: #FFA8C6;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .sub-heading > span {
@@ -195,8 +195,18 @@ p {
 }
 
 p + * {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   display: inline-block;
+}
+
+p + .note {
+  margin-top: 1rem;
+}
+
+.note {
+  font-size: 1.4rem;
+  color: #c3cbe7;
+  font-weight: bold;
 }
 
 .footer {

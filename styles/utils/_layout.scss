@@ -3,10 +3,6 @@
     padding: 0 20%;
 
     @include breakpoint-down('lg') {
-      padding: 0 10%;
-    }
-
-    @include breakpoint-down('md') {
       padding: 0 5%;
     }
 }

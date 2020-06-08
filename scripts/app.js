@@ -94,6 +94,17 @@ let app = new Vue({
         console.error(err)
         return [];
       }
+    },
+    getMainCardLink (card) {
+      let link = null;
+      if (card.type === 'Development')
+        link = card.links.find(l => l.name === 'Demo');
+        
+      return link 
+        ? link.url 
+        : card.links.length > 0 
+          ? card.links[0].url 
+          : '#';
     }
   },
   async mounted () {

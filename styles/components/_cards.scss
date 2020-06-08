@@ -1,10 +1,9 @@
 .card {
-  background-color: #474c58; // blacker: #2d2f35
+  background-color: #474c58;
   color: white;
   width: 100%;
   border-radius: 20px;
   padding: 6rem 9rem;
-  //border: 0.5rem solid $primary;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -12,16 +11,19 @@
   &--project {
     padding: 0 !important;
     flex-direction: row;
+    height: 330px;
 
-    .img-container,
     .card-body {
-      width: 50%;
+      flex: 1;
     }
 
     .img-container {
       overflow: hidden;
-
+      border-bottom: 0;
+      
       @include breakpoint-up('md') {
+        max-width: 450px;
+        width: 50%;
         display: flex;
         justify-content: center;
       }
@@ -41,6 +43,7 @@
 
     @include breakpoint-down('md') {
       flex-direction: column;
+      height: initial;
 
       &,
       &:hover {

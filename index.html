@@ -98,9 +98,9 @@
             </ul>
           </div>
           <div v-for="card in projects" :key="card.name" class="card card--project">
-            <div class="img-container">
+            <a class="img-container" :href="getMainCardLink(card)" target="_blank" rel="noreferrer">
               <img class="img" :src="card.img" :alt="card.name" />
-            </div>
+            </a>
             <div class="card-body">
               <h2 class="secondary-heading">{{ card.name }}</h2>
               <h3 class="sub-heading">{{ card.type }}</h3>

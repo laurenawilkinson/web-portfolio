@@ -29,9 +29,9 @@
     color: $primary-light;
     margin-bottom: 1.5rem;
 
-    > span {
-        display: block;
-        line-height: 1.4;
+    > span.block {
+      display: block;
+      line-height: 1.4;
     }
 }
 

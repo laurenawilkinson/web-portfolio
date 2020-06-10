@@ -40,8 +40,8 @@
         <div class="container">
           <h1 class="main-heading">Lauren Wilkinson</h1>
           <h2 class="sub-heading">
-              <span>Front-End Web Developer &</span>
-              <span>UI Designer</span>
+              <span class="block">Front-End Web Developer &</span>
+              <span class="block">UI Designer</span>
           </h2>
           <a 
               class="btn btn--primary btn--large"
@@ -84,8 +84,8 @@
               <li>
                 <button 
                   :class="{ 'btn btn--secondary btn--outline': true, active: showUiDesign }" 
-                  @click="showUiDesign ? deactivateType('Ui Design') : activateType('Ui Design')">
-                  Ui Design
+                  @click="showUiDesign ? deactivateType('UI Design') : activateType('UI Design')">
+                  UI Design
                 </button>
               </li>
               <li>
@@ -103,7 +103,7 @@
             </a>
             <div class="card-body">
               <h2 class="secondary-heading">{{ card.name }}</h2>
-              <h3 class="sub-heading">{{ card.type }}</h3>
+              <h3 class="sub-heading"> {{ card.tech.join(', ') }}</h3>
               <p>{{ card.description }}</p>
               <p class="note" v-if="card.note">{{ card.note }}</p>
               <ul v-if="card.links" class="btn-list btn-list--inline">

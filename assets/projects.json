@@ -2,6 +2,7 @@
   {
     "name": "Digital Bullet Journal",
     "type": "Development",
+    "tech": [ "Vue", "SCSS", "IndexedDB" ],
     "description": "A PWA made for my Final Year Project, that aims to capture the user experience of the paper-based Bullet Journal planning system digitally.",
     "links": [
       { "name": "Code", "url": "https://github.com/laurenawilkinson/bullet-journal" },
@@ -12,6 +13,7 @@
   {
     "name": "McIntire Fruit",
     "type": "Development",
+    "tech": [ "Vue", "SCSS", "Wordpress API" ],
     "description": "A site designed and developed for a fictional organic fruit-and-veg company, using Vue and Wordpress API.",
     "note": "Wordpress API is currently unhosted, so products will not be available at this time.",
     "links": [
@@ -23,6 +25,7 @@
   {
     "name": "Unbound Interactive",
     "type": "Development",
+    "tech": [ "HTML", "SCSS" ],
     "description": "A website designed and built for the indie game development company, Unbound Interactive.",
     "links": [
       { "name": "Code", "url": "https://github.com/laurenawilkinson/unboundinteractive" },
@@ -33,6 +36,7 @@
   {
     "name": "Ellie Wilkinson Portfolio",
     "type": "Development",
+    "tech": [ "Vue", "SCSS" ],
     "description": "A portfolio website designed and built for a technical production student.",
     "links": [
       { "name": "Code", "url": "https://github.com/laurenawilkinson/ellie-wilkinson" },
@@ -43,6 +47,7 @@
   {
     "name": "Cat Adoption",
     "type": "Development",
+    "tech": [ "HTML", "SCSS", "JavaScript" ],
     "description": "A simple virtual pet game written in vanilla JavaScript, incorporating ES6 features.",
     "links": [
       { "name": "Code", "url": "https://github.com/laurenawilkinson/cat-adoption" },
@@ -52,7 +57,8 @@
   },
   {
     "name": "Bonta's Bakery",
-    "type": "Ui Design",
+    "type": "UI Design",
+    "tech": [ "Adobe XD" ],
     "description": "An ecommerce website I designed for a fictional bakery.",
     "links": [
       { "name": "View on Dribbble", "url": "https://dribbble.com/shots/6680498-Minimalist-Bakery-Ecommerce-Website" }

@@ -62,13 +62,13 @@ let app = new Vue({
   },
   computed: {
     projects () {
-      const filter = (this.showUiDesign && this.showDevelopment) || (!this.showUiDesign && !this.showDevelopment) ? null : this.showUiDesign ? 'Ui Design' : 'Development';
+      const filter = (this.showUiDesign && this.showDevelopment) || (!this.showUiDesign && !this.showDevelopment) ? null : this.showUiDesign ? 'UI Design' : 'Development';
       return filter === null ? this.cards : this.cards.filter(x => x.type === filter);
     }
   },
   methods: {
     activateType (type) {
-      if (type === 'Ui Design') {
+      if (type === 'UI Design') {
         this.showUiDesign = true;
         this.showDevelopment = false;
       }
@@ -78,7 +78,7 @@ let app = new Vue({
       }
     },
     deactivateType (type) {
-      if (type === 'Ui Design') {
+      if (type === 'UI Design') {
         this.showUiDesign = false;
       }
       if (type === 'Development') {

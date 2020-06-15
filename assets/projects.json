@@ -45,6 +45,17 @@
     "img": "assets/images/projects/ElliePortfolio.png"
   },
   {
+    "name": "Meow Meow Chat",
+    "type": "Development",
+    "tech": [ "Websockets", "Vue", "Node.js" ],
+    "description": "A cat-themed chat room created using websockets, a Node.js server and Vue.",
+    "links": [
+      { "name": "Code", "url": "https://github.com/laurenawilkinson/meow-meow-chat" },
+      { "name": "Demo", "url": "https://meow-meow-chat.herokuapp.com/" }
+    ],
+    "img": "assets/images/projects/MeowMeowChat.png"
+  },
+  {
     "name": "Cat Adoption",
     "type": "Development",
     "tech": [ "HTML", "SCSS", "JavaScript" ],
@@ -59,7 +70,7 @@
     "name": "Bonta's Bakery",
     "type": "UI Design",
     "tech": [ "Adobe XD" ],
-    "description": "An ecommerce website I designed for a fictional bakery.",
+    "description": "An ecommerce website designed for a fictional bakery.",
     "links": [
       { "name": "View on Dribbble", "url": "https://dribbble.com/shots/6680498-Minimalist-Bakery-Ecommerce-Website" }
     ],

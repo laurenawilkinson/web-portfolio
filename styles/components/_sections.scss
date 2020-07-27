@@ -27,6 +27,10 @@
 
         .sub-heading {
             font-size: 2.2rem;
+
+            @include breakpoint-down('sm') {
+              font-size: 1.9rem;
+            }
         }
     }
 

@@ -22,16 +22,29 @@ body {
 }
 
 .content {
-    position: relative;
+  position: relative;
+  overflow: hidden;
 }
 
 .blob {
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
-    width: 50%;
-    min-width: 300px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  width: 50%;
+  min-width: 300px;
+
+  @include breakpoint-down('md') {
+    transform: rotate(100deg);
+    top: 120px;
+    right: 20px;
+  }
+
+  @include breakpoint-down('sm') {
+    transform: rotate(100deg) scale(0.7);
+    right: -40px;
+    top: 170px;
+  }
 }
 
 #top {

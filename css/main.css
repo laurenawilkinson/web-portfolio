@@ -24,6 +24,7 @@ body {
 
 .content {
   position: relative;
+  overflow: hidden;
 }
 
 .blob {
@@ -33,6 +34,24 @@ body {
   z-index: -1;
   width: 50%;
   min-width: 300px;
+}
+
+@media (max-width: 800px) {
+  .blob {
+    -webkit-transform: rotate(100deg);
+            transform: rotate(100deg);
+    top: 120px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blob {
+    -webkit-transform: rotate(100deg) scale(0.7);
+            transform: rotate(100deg) scale(0.7);
+    right: -40px;
+    top: 170px;
+  }
 }
 
 #top .main-heading,
@@ -191,7 +210,7 @@ a {
 .sub-heading {
   font-size: 2rem;
   color: #FFA8C6;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1em;
 }
 
 .sub-heading > span.block {
@@ -363,6 +382,12 @@ p + .note {
 
 .section#top .sub-heading {
   font-size: 2.2rem;
+}
+
+@media (max-width: 480px) {
+  .section#top .sub-heading {
+    font-size: 1.9rem;
+  }
 }
 
 .section:last-of-type {

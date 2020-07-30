@@ -23,6 +23,17 @@
     "img": "assets/images/projects/McintireFruit.png"
   },
   {
+    "name": "To-Do To-Day",
+    "type": "Development",
+    "tech": [ "React", "TailwindCSS" ],
+    "description": "A daily  to-do list web application developed using React and styled using TailwindCSS.",
+    "links": [
+      { "name": "Code", "url": "https://github.com/laurenawilkinson/react-todo" },
+      { "name": "Demo", "url": "https://to-do-to-day.netlify.app/" }
+    ],
+    "img": "assets/images/projects/ToDoToDay.png"
+  },
+  {
     "name": "Unbound Interactive",
     "type": "Development",
     "tech": [ "HTML", "SCSS" ],
@@ -54,17 +65,6 @@
       { "name": "Demo", "url": "https://meow-meow-chat.herokuapp.com/" }
     ],
     "img": "assets/images/projects/MeowMeowChat.png"
-  },
-  {
-    "name": "Cat Adoption",
-    "type": "Development",
-    "tech": [ "HTML", "SCSS", "JavaScript" ],
-    "description": "A simple virtual pet game written in vanilla JavaScript, incorporating ES6 features.",
-    "links": [
-      { "name": "Code", "url": "https://github.com/laurenawilkinson/cat-adoption" },
-      { "name": "Demo", "url": "https://laurenawilkinson.github.io/cat-adoption" }
-    ],
-    "img": "assets/images/projects/CatAdoption.png"
   },
   {
     "name": "Bonta's Bakery",

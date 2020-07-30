@@ -22,6 +22,7 @@ let app = new Vue({
       { name: 'JavaScript', icon: 'fab fa-js-square' },
       { name: 'NodeJS', icon: 'fab fa-node-js' },
       { name: 'VueJS', icon: 'fab fa-vuejs' },
+      { name: 'React', icon: 'fab fa-react' },
       { name: 'Wordpress', icon: 'fab fa-wordpress'},
       { name: 'Adobe Photoshop, Adobe XD', icon: 'fab fa-adobe' },
       { name: 'Bootstrap', icon: 'fab fa-bootstrap' },

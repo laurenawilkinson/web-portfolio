@@ -1,6 +1,6 @@
 Vue.component('hidden-email', {
   template: `
-    <a href="mailto:laurenaeron@gmail.com">&#108;&#097;&#117;&#114;&#101;&#110;&#097;&#101;&#114;&#111;&#110;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</a>
+    <a href="mailto:lauren.a.wilkinson@outlook.com">Email</a>
   `
 })
 Vue.component('interactive', {

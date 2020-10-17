@@ -1,6 +1,6 @@
 Vue.component('hidden-email', {
   template: `
-    <a href="mailto:lauren.a.wilkinson@outlook.com">Email</a>
+    <a href="mailto:lauren.a.wilkinson@outlook.com"><i class="far fa-envelope"></i> Email Me!</a>
   `
 })
 Vue.component('interactive', {
@@ -23,7 +23,7 @@ let app = new Vue({
       { name: 'VueJS', icon: 'fab fa-vuejs' },
       { name: 'React', icon: 'fab fa-react' },
       { name: 'Wordpress', icon: 'fab fa-wordpress'},
-      { name: 'Adobe Photoshop, Adobe XD', icon: 'fab fa-adobe' },
+      { name: 'Adobe Photoshop, Adobe XD', icon: 'fas fa-camera' },
       { name: 'Bootstrap', icon: 'fab fa-bootstrap' },
       { name: 'Git, Github', icon: 'fab fa-git-alt' }
     ],

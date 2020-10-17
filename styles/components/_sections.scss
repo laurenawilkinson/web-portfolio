@@ -15,6 +15,7 @@
 
     &#top {
         align-items: flex-start;
+        position: relative;
 
         .container {
             margin-top: 10%;
@@ -31,6 +32,26 @@
             @include breakpoint-down('sm') {
               font-size: 1.9rem;
             }
+        }
+
+        .blob {
+          position: absolute;
+          top: -10%;
+          right: -100px;
+          width: 60vw;
+          z-index: -1;
+          min-width: 500px;
+
+          @include breakpoint-down('md') {
+            top: unset;
+            bottom: -150px;
+            width: 500px;
+          }
+
+          @include breakpoint-down('sm') {
+            bottom: -200px;
+            right: -200px;
+          }
         }
     }
 

@@ -12,7 +12,6 @@ Vue.component('interactive', {
 let app = new Vue({
   el: '#app',
   data: {
-    message: 'Hello Vue!',
     showUiDesign: false,
     showDevelopment: false,
     technologies: [

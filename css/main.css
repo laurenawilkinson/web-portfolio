@@ -27,33 +27,6 @@ body {
   overflow: hidden;
 }
 
-.blob {
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -1;
-  width: 50%;
-  min-width: 300px;
-}
-
-@media (max-width: 800px) {
-  .blob {
-    -webkit-transform: rotate(100deg);
-            transform: rotate(100deg);
-    top: 120px;
-    right: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .blob {
-    -webkit-transform: rotate(100deg) scale(0.7);
-            transform: rotate(100deg) scale(0.7);
-    right: -40px;
-    top: 170px;
-  }
-}
-
 #top .main-heading,
 #top .sub-heading {
   text-shadow: 3px 3px 3px #37393e;
@@ -369,6 +342,7 @@ p + .note {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  position: relative;
 }
 
 .section#top .container {
@@ -387,6 +361,30 @@ p + .note {
 @media (max-width: 480px) {
   .section#top .sub-heading {
     font-size: 1.9rem;
+  }
+}
+
+.section#top .blob {
+  position: absolute;
+  top: -10%;
+  right: -100px;
+  width: 60vw;
+  z-index: -1;
+  min-width: 500px;
+}
+
+@media (max-width: 800px) {
+  .section#top .blob {
+    top: unset;
+    bottom: -150px;
+    width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section#top .blob {
+    bottom: -200px;
+    right: -200px;
   }
 }
 

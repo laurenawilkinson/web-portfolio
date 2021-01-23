@@ -210,6 +210,10 @@ p + .note {
   font-weight: bold;
 }
 
+.hidden {
+  display: none;
+}
+
 .footer {
   padding: 3rem 0;
   background: #FFBC65;
@@ -745,4 +749,8 @@ p + .note {
   border-radius: 5px;
   color: white;
   font-size: 1.6rem;
+}
+
+.form .form-control option:disabled {
+  color: #c3cbe7;
 }

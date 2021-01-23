@@ -41,5 +41,9 @@
     border-radius: $border-radius;
     color: white;
     font-size: $label-font-size;
+
+    option:disabled {
+      color: $grey-100;
+    }
   }
 }

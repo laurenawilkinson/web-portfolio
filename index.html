@@ -157,21 +157,23 @@
               </ul>
             </div>
             <div class="flex-col">
-              <form name="contact" method="POST" data-netlify="true" class="form">
+              <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="form">
+                <input class="hidden" name="bot-field" />
                 <div class="form-row">
                   <label class="form-label form-label--inline">
                     Name
-                    <input class="form-control" type="text" name="name" />
+                    <input class="form-control" type="text" name="name" required />
                   </label>
                   <label class="form-label form-label--inline">
                     Email
-                    <input class="form-control" type="email" name="email" />
+                    <input class="form-control" type="email" name="email" required />
                   </label>
                 </div>
                 <div class="form-row">
                   <label class="form-label">
                     Subject
-                    <select class="form-control" name="subject">
+                    <select class="form-control" name="subject" required>
+                      <option value="" selected disabled>Select a subject</option>
                       <option value="opportunity">Job Opportunity</option>
                       <option value="collaboration">Let's Collaborate</option>
                       <option value="hi">Just Saying Hi</option>
@@ -181,7 +183,7 @@
                 <div class="form-row">
                   <label class="form-label">
                     Message
-                    <textarea class="form-control" name="message" rows="3"></textarea>
+                    <textarea class="form-control" name="message" rows="3" required></textarea>
                   </label>
                 </div>
                 <div class="form-row">

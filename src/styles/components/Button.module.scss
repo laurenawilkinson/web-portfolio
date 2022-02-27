@@ -1,0 +1,127 @@
+@import '../utils/variables';
+
+@mixin reset {
+  box-shadow: none;
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  background-color: var(--button-background);
+  color: var(--button-color);
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@mixin hoverAnimation {
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 1em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(var(--button-background-hover), 0.2);
+    will-change: opacity, transform;
+    opacity: 0;
+    transform: scale(0.5);
+    transition-property: opacity, transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.buttonMain {
+  @include reset;
+  --button-background: var(--primary);
+  --button-color: var(--primary-font-color);
+  --button-height: 3em;
+
+  font-weight: 600;
+  padding: 0 1.5em;
+  height: var(--button-height);
+  font-size: 0.9em;
+  border-radius: $border-radius;
+}
+
+.buttonLight {
+  @include reset;
+  --button-background-rgb: var(--primary-rgb);
+  --button-color-dark: var(--primary-darker);
+  --button-color-light: var(--primary-lighter);
+  --button-height: 3em;
+
+  background-color: rgba(var(--button-background-rgb), 0.3);
+  font-weight: 600;
+  padding: 0 1.5em;
+  height: var(--button-height);
+  font-size: 0.9em;
+  border-radius: $border-radius;
+  color: var(--button-color-dark);
+}
+
+:global(.dark-theme) {
+  .buttonLight {
+    color: var(--button-color-light);
+  }
+}
+
+.buttonPlain {
+  @include reset;
+  @include hoverAnimation;
+
+  --button-background-hover: var(--primary-rgb);
+  --button-color: var(--primary);
+
+  background-color: transparent;
+  font-weight: 600;
+
+  &::after {
+    $padding-h: 0.75em;
+    $padding-v: 0.5em;
+
+    width: calc(100% + ($padding-h * 2));
+    left: -$padding-h;
+    height: calc(100% + ($padding-v * 2));
+    top: -$padding-v;
+  }
+}
+
+.buttonIcon {
+  @include reset;
+  @include hoverAnimation;
+  $button-size: 40px;
+
+  --button-background-hover: var(--primary-rgb);
+  --button-color: var(--primary);
+
+  background-color: transparent;
+  border-radius: 100%;
+  width: $button-size;
+  height: $button-size;
+
+  &::after {
+    border-radius: 50%;
+  }
+
+  i {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.hasIconRight {
+  i {
+    margin-left: 0.5em;
+  }
+}

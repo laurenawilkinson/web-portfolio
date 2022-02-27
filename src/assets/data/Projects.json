@@ -1,0 +1,60 @@
+[
+  {
+    "name": "Digital Bullet Journal",
+    "featured": true,
+    "description": "A PWA made for my Final Year Project, that aims to capture the user experience of the paper-based Bullet Journal planning system digitally.",
+    "tech": ["Vue", "Sass", "IndexedDB", "Canvas"],
+    "colour": "purple",
+    "image": "DigitalBulletJournal.png",
+    "code": "https://github.com/laurenawilkinson/bullet-journal",
+    "demo": "https://lw-bullet-journal.netlify.app/"
+  },
+
+  {
+    "name": "McIntire Fruit",
+    "featured": true,
+    "description": "A site designed and developed for a fictional organic fruit-and-veg company, using Vue and Wordpress REST API.",
+    "tech": ["Vue", "Sass", "Wordpress API"],
+    "colour": "green",
+    "image": "McintireFruit.png",
+    "code": "https://github.com/laurenawilkinson/mcintire-fruit",
+    "demo": "https://lw-mcintire-fruit.netlify.app/"
+  },
+
+  {
+    "name": "Meow Meow Chat",
+    "featured": true,
+    "description": "A cat-themed chat room created using websockets, a Node.js server and Vue.",
+    "tech": ["Vue", "Express", "Websockets", "Heroku"],
+    "colour": "blue",
+    "image": "MeowMeowChat.png",
+    "code": "https://github.com/laurenawilkinson/meow-meow-chat",
+    "demo": "https://meow-meow-chat.herokuapp.com/"
+  },
+
+  {
+    "name": "To-Do To-Day",
+    "featured": false,
+    "description": "A daily to-do list web application developed using React and styled using TailwindCSS.",
+    "tech": ["React", "Tailwind", "localStorage"],
+    "code": "https://github.com/laurenawilkinson/react-todo",
+    "demo": "https://to-do-to-day.netlify.app/"
+  },
+
+  {
+    "name": "Blinkie Maker",
+    "featured": false,
+    "description": "An old-school blinkie maker where you can use a drag-and-drop editor to create a pixel-themed GIF.",
+    "tech": ["Vue", "Sass", "Canvas"],
+    "code": "https://github.com/laurenawilkinson/blinkie-maker",
+    "demo": "https://blinkie-maker.netlify.app/"
+  },
+
+  {
+    "name": "Gift Profile",
+    "featured": false,
+    "upcoming": true,
+    "description": "Create a profile to share your gift preferences, clothing sizes and wishlists with your friends and family.",
+    "tech": ["React", "Sass", "Express", "Postgres", "Prisma", "TypeScript"]
+  }
+]

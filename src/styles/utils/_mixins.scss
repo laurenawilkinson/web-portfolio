@@ -1,0 +1,84 @@
+@import './_variables.scss';
+
+@mixin min-breakpoint($size) {
+  @if $size == xs {
+    @media (min-width: $min-xs) {
+      @content;
+    }
+  } @else if $size == sm {
+    @media (min-width: $min-sm) {
+      @content;
+    }
+  } @else if $size == md {
+    @media (min-width: $min-md) {
+      @content;
+    }
+  } @else if $size == lg {
+    @media (min-width: $min-lg) {
+      @content;
+    }
+  } @else if $size == xl {
+    @media (min-width: $min-xl) {
+      @content;
+    }
+  } @else if $size == xxl {
+    @media (min-width: $min-xxl) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $size) {
+      @content;
+    }
+  }
+}
+
+@mixin max-breakpoint($size) {
+  @if $size == xs {
+    @media (max-width: $max-xs) {
+      @content;
+    }
+  } @else if $size == sm {
+    @media (max-width: $max-sm) {
+      @content;
+    }
+  } @else if $size == md {
+    @media (max-width: $max-md) {
+      @content;
+    }
+  } @else if $size == lg {
+    @media (max-width: $max-lg) {
+      @content;
+    }
+  } @else if $size == xl {
+    @media (max-width: $max-xl) {
+      @content;
+    }
+  } @else if $size == xxl {
+    @media (max-width: $max-xxl) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $size) {
+      @content;
+    }
+  }
+}
+
+@mixin rounded-scrollbar($color, $border-width: 3px) {
+  scrollbar-width: thin;
+  scrollbar-color: $color;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color;
+    border: $border-width solid var(--background-color);
+    border-radius: 10px;
+  }
+}

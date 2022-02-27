@@ -1,0 +1,21 @@
+[
+  {
+    "title": "Languages",
+    "list": ["JavaScript (ES6)", "TypeScript", "HTML", "CSS & Sass"]
+  },
+
+  {
+    "title": "Frameworks",
+    "list": ["Vue", "React & Next", "Node & Express", "Wordpress", "Prisma"]
+  },
+
+  {
+    "title": "Tools",
+    "list": ["Git & Github", "Postman", "Firebase", "MongoDB", "Postgres"]
+  },
+
+  {
+    "title": "Design",
+    "list": ["Adobe XD", "Adobe Photoshop", "Figma"]
+  }
+]

@@ -1,0 +1,11 @@
+@import '../utils/variables';
+
+.skill {
+  display: inline-flex;
+  border: 1px solid var(--primary);
+  padding: .25em .75em;
+  margin: .5em;
+  border-radius: .25em;
+  color: var(--primary);
+  font-family: $sub-font-family;
+}

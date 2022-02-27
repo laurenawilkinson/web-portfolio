@@ -1,5 +1,7 @@
 # Lauren's Web Portfolio ✨
 
-My updated web portfolio. Built with HTML, SCSS and a touch of Vue.
+Portfolio v2 - Made with Gatsby + CSS Modules
 
-## [Demo](https://laurenwilkinson.co.uk) 💻
+**WIP**
+
+<!-- ## [Demo](https://laurenwilkinson.co.uk) 💻 -->

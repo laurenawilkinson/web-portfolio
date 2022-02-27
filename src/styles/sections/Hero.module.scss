@@ -1,0 +1,16 @@
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.tagline {
+  max-width: 19em;
+  font-size: 1.35em;
+  margin-bottom: 0.75em;
+
+  img {
+    display: inline-flex;
+    vertical-align: text-bottom;
+  }
+}

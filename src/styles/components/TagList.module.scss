@@ -1,0 +1,27 @@
+@import '../utils/variables';
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  font-size: 0.75em;
+
+  &.medium {
+    font-size: 0.75em;
+  }
+
+  &.small {
+    font-size: 0.65em;
+  }
+}
+
+.listItem {
+  --tag-background: rgba(var(--font-color-rgb), 0.1);
+  --tag-color: rgba(var(--font-color-rgb), 0.6);
+  padding: 0.5em 1em;
+  border-radius: 3em;
+  background-color: var(--tag-background);
+  font-family: $sub-font-family;
+  letter-spacing: 0.5px;
+  color: var(--tag-color);
+}

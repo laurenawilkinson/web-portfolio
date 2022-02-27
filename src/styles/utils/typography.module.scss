@@ -1,0 +1,46 @@
+@import '../utils/variables';
+
+@mixin heading {
+  color: var(--heading-font-color);
+  line-height: 1.25;
+  margin-bottom: 0.25em;
+}
+
+.headingXl {
+  @include heading;
+  font-size: 3.25em;
+  font-weight: 700;
+}
+
+.headingLg {
+  @include heading;
+  font-size: 2.75em;
+  font-weight: 700;
+}
+
+.headingMd {
+  @include heading;
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+.headingSm {
+  @include heading;
+  font-size: 2em;
+}
+
+.subHeading {
+  font-size: 1em;
+  font-family: $sub-font-family;
+  color: var(--primary);
+  text-transform: uppercase;
+
+  &::before {
+    content: '>';
+    margin-right: 0.5em;
+  }
+}
+
+.primaryText {
+  color: var(--primary);
+}

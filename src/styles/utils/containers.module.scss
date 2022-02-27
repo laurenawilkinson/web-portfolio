@@ -1,0 +1,30 @@
+@import '../utils/variables';
+
+@mixin container($size) {
+  width: 100%;
+  max-width: $size;
+  padding-left: var(--wrapper-padding);
+  padding-right: var(--wrapper-padding);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.containerXl {
+  @include container($wrapper-width-xl);
+}
+
+.containerLg {
+  @include container($wrapper-width-lg);
+}
+
+.containerMd {
+  @include container($wrapper-width-md);
+}
+
+.containerSm {
+  @include container($wrapper-width-sm);
+}
+
+.containerXs {
+  @include container($wrapper-width-xs);
+}

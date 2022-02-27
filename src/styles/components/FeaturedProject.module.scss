@@ -1,0 +1,109 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+$stacking-breakpoint: lg;
+
+.section {
+  display: grid;
+  --accent-color-text: black;
+
+  @include min-breakpoint($stacking-breakpoint) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5em;
+    min-height: 110vh;
+  }
+
+  &.purple {
+    --accent-color: #c6beff;
+    --accent-color-rgb: 198, 190, 255;
+    --accent-color-title: #9388df;
+  }
+
+  &.green {
+    --accent-color: var(--secondary);
+    --accent-color-rgb: var(--secondary-rgb);
+    --accent-color-title: #73bb20;
+  }
+
+  &.blue {
+    --accent-color: #a7f5f5;
+    --accent-color-rgb: 167, 245, 245;
+    --accent-color-title: #10c1c1;
+  }
+}
+
+.imageSection,
+.textSection {
+  display: flex;
+  align-items: center;
+}
+
+.imageSection {
+  background-image: linear-gradient(
+    180deg,
+    var(--accent-color) 0%,
+    var(--accent-color) 80%,
+    transparent 70%,
+    transparent 100%
+  );
+  justify-content: center;
+
+  @include max-breakpoint($stacking-breakpoint) {
+    padding: 4em var(--wrapper-padding) 0;
+  }
+
+  @include min-breakpoint($stacking-breakpoint) {
+    background-image: linear-gradient(
+      90deg,
+      var(--accent-color) 0%,
+      var(--accent-color) 80%,
+      transparent 70%,
+      transparent 100%
+    );
+    justify-content: flex-end;
+  }
+
+  img {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    border-radius: $border-radius;
+  }
+}
+
+.textSectionWrapper {
+  padding-top: 3em;
+  padding-bottom: 4em;
+  height: unset;
+  align-items: center;
+  grid-template-rows: repeat(3, auto);
+
+  @include min-breakpoint($stacking-breakpoint) {
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    max-width: 30em;
+  }
+
+  h4 {
+    margin-bottom: 0.1em;
+  }
+}
+
+.buttonMain,
+.buttonLight {
+  --button-color: var(--accent-color-text);
+}
+
+.buttonMain {
+  --button-background: var(--accent-color);
+}
+
+.buttonLight {
+  --button-background-rgb: var(--accent-color-rgb);
+  --button-color-light: var(--accent-color);
+  --button-color-dark: var(--accent-color-title);
+}
+
+.buttonPlain {
+  --button-background-hover: var(--accent-color-rgb);
+  --button-color: var(--accent-color);
+}

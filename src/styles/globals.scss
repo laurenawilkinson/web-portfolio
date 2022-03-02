@@ -11,6 +11,9 @@
   --primary-lighter: #ffdbde;
   --primary-dark: #ba6b6c;
   --primary-darker: #995758;
+  --primary-darker-rgb: 153, 87, 88;
+  --primary-darkest: #5e3435;
+  --primary-darkest-rgb: 94, 52, 53;
 
   --primary-accent: #ff74a4;
   --primary-accent-rgb: 255, 116, 164;
@@ -38,8 +41,9 @@
   --heading-font-color: var(--black);
   --font-color: var(--black-light);
   --font-color-rgb: var(--black-light-rgb);
-  --primary-font-color: var(--black-light);
+  --primary-font-color: #462e2e;
   --card-background-color: #f3f3f3;
+  --scrollbar-color: #d5d5d5;
 
   --wrapper-padding: #{$wrapper-padding};
 
@@ -51,7 +55,7 @@ html {
 }
 
 body {
-  @include rounded-scrollbar(var(--primary));
+  @include rounded-scrollbar(var(--scrollbar-color));
 
   background-color: var(--background-color);
   font-family: $main-font-family;
@@ -69,6 +73,7 @@ body {
     --font-color: var(--white-dark);
     --font-color-rgb: var(--white-dark-rgb);
     --card-background-color: #202020;
+    --scrollbar-color: rgb(85, 85, 85);
   }
 
   ::selection {

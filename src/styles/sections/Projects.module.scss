@@ -2,19 +2,23 @@
 @import '../utils/mixins';
 
 .section {
-  min-height: 100vh;
+  min-height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 4em 0;
 }
 
 .projectCards {
   $min-card-width: 320px;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax($min-card-width, 1fr));
   gap: 1.5rem;
   margin-top: 3em;
+
+  @include min-breakpoint(sm) {
+    grid-template-columns: repeat(auto-fit, minmax($min-card-width, 1fr));
+  }
 
   @include min-breakpoint(xl) {
     gap: 2.5rem;

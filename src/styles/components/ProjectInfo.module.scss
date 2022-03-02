@@ -1,4 +1,5 @@
 @import '../utils/variables';
+@import '../utils/mixins';
 
 .textSectionWrapper {
   display: grid;
@@ -10,10 +11,15 @@
 .buttons {
   display: flex;
   align-items: center;
-  margin-top: 0.5em;
+  margin: 0.5em -0.5em -0.5em;
+  flex-wrap: wrap;
 
-  a + a {
-    margin-left: 1em;
+  a {
+    margin: 0.5em;
+
+    @include max-breakpoint(400px) {
+      flex: 1;
+    }
   }
 }
 

@@ -1,0 +1,65 @@
+@import '../utils/mixins';
+
+.section {
+  $wave-height: 8vw;
+
+  background-color: var(--primary);
+  color: var(--primary-darkest);
+  padding: 4em 0;
+  margin-top: $wave-height;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    width: 100%;
+    height: $wave-height;
+    background-image: url(/images/deco/footer-wave.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.container {
+  display: grid;
+  gap: 2em;
+
+  @include min-breakpoint(md) {
+    grid-template-columns: auto 1fr;
+  }
+}
+
+.textContainer {
+  max-width: 30em;
+  color: var(--primary-darker);
+  font-weight: 600;
+}
+
+.heading {
+  color: var(--primary-darkest);
+}
+
+.buttonLink {
+  --button-color: var(--primary-darkest);
+  --button-background-hover: var(--primary-darker-rgb);
+}
+
+.links {
+  display: grid;
+  align-items: center;
+  gap: 1.5em;
+  grid-auto-flow: column;
+  justify-self: start;
+
+  @include min-breakpoint(md) {
+    gap: 3em;
+    justify-self: end;
+  }
+}
+
+.link {
+  display: flex;
+}

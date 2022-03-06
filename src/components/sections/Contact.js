@@ -36,7 +36,7 @@ const Contact = () => {
               <a
                 className={cn(buttonPlain, hasIconLeft, styles.buttonLink)}
                 href={link}
-                target="_blank"
+                target={name === 'email' ? '' : '_blank'}
                 rel="noreferrer"
               >
                 {icon && <Icon>{icon}</Icon>}

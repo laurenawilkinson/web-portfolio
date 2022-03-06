@@ -13,7 +13,7 @@ const Layout = ({
 }) => {
   return (
     <main>
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: 'en' }}>
         <meta charSet="utf-8" />
         <title>{pageTitle}</title>
         <meta name="title" content={pageTitle} />

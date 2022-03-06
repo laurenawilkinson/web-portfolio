@@ -29,9 +29,9 @@ const ProjectInfo = ({ project = {}, featured = false }) => {
         {featured && (
           <p className={cn(subHeading, styles.subHeading)}>Featured Project</p>
         )}
-        <h4 className={cn({ [headingLg]: featured, [headingSm]: !featured })}>
+        <h3 className={cn({ [headingLg]: featured, [headingSm]: !featured })}>
           {name}
-        </h4>
+        </h3>
 
         <TagList items={tech} size={!featured ? 'small' : 'medium'} />
       </div>
@@ -56,6 +56,8 @@ const ProjectInfo = ({ project = {}, featured = false }) => {
                 [featuredStyles.buttonMain]: featured,
               })}
               href={demo}
+              target="_blank"
+              rel="noreferrer"
             >
               {featured ? 'View Site' : 'Site'} <Icon>arrow_right_alt</Icon>
             </a>
@@ -69,6 +71,8 @@ const ProjectInfo = ({ project = {}, featured = false }) => {
                 [featuredStyles.buttonLight]: featured,
               })}
               href={code}
+              target="_blank"
+              rel="noreferrer"
             >
               Code <Icon>code</Icon>
             </a>

@@ -1,4 +1,5 @@
 import * as React from 'react'
+import cn from 'classnames'
 import { containerXl } from '../styles/utils/containers.module.scss'
 import { buttonPlain } from '../styles/components/Button.module.scss'
 import * as styles from '../styles/components/Header.module.scss'
@@ -23,7 +24,7 @@ const Header = () => {
                 </a>
               </li>
             ))}
-            <li>
+            <li className={cn(styles.navLink, styles.themeToggleButton)}>
               <ThemeToggleButton />
             </li>
           </ul>

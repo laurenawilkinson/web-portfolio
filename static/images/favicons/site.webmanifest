@@ -1,0 +1,14 @@
+{
+  "name": "Lauren Wilkinson | Front-End Developer",
+  "short_name": "Lauren Wilkinson",
+  "icons": [
+    {
+      "src": "/images/favicons/android-chrome-96x96.png?v=2",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ef9a9a",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

@@ -1,4 +1,11 @@
 @import '../utils/variables';
+@import '../utils/mixins';
+
+@mixin mobile-header {
+  @include max-breakpoint(sm) {
+    @content;
+  }
+}
 
 .header {
   padding: 2em 0;
@@ -8,21 +15,48 @@
   left: 0;
   display: flex;
   align-items: center;
+
+  @include mobile-header {
+    padding-top: 1em;
+  }
 }
 
 .nav {
   display: flex;
   justify-content: flex-end;
+
+  @include mobile-header {
+    justify-content: center;
+  }
 }
 
 .navLinks {
   display: grid;
   grid-auto-flow: column;
   gap: 3em;
+
+  @include mobile-header {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: row;
+    gap: 1em 3em;
+  }
 }
 
 .navLink {
   text-align: center;
   display: flex;
   align-items: center;
+  justify-content: center;
+
+  @include mobile-header {
+    grid-row: 2;
+  }
+}
+
+.themeToggleButton {
+  @include mobile-header {
+    grid-row: 1;
+    grid-column: 3;
+    justify-content: flex-end;
+  }
 }

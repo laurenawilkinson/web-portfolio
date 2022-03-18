@@ -1,16 +1,13 @@
 @import '../utils/mixins';
 
 .section {
+  min-height: 100vh;
   display: flex;
   align-items: center;
   padding-top: 10em;
   padding-bottom: 10em;
   overflow: hidden;
   position: relative;
-
-  @include min-breakpoint(sm) {
-    min-height: 100vh;
-  }
 }
 
 .tagline {
@@ -33,6 +30,10 @@
 }
 
 .textContainer {
+  @include min-breakpoint(md) {
+    padding-left: 2em;
+  }
+
   @include min-breakpoint(lg) {
     min-width: 500px;
   }
@@ -62,10 +63,11 @@
 
     svg {
       width: auto;
+      margin-top: 7%;
     }
   }
 
-  @include max-breakpoint(730px) {
+  @include max-breakpoint(sm) {
     display: none;
   }
 }

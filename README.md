@@ -1,5 +1,5 @@
 # Lauren's Web Portfolio ✨
 
-My updated web portfolio. Built with HTML, SCSS and a touch of Vue.
+Portfolio v1 - Built with HTML, SCSS and a touch of Vue.
 
-## [Demo](https://laurenwilkinson.co.uk) 💻
+## [Demo](https://v1.laurenwilkinson.co.uk) 💻

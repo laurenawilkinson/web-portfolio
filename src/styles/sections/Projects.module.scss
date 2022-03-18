@@ -2,15 +2,18 @@
 @import '../utils/mixins';
 
 .section {
-  min-height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 4em 0;
+
+  @include min-breakpoint(sm) {
+    min-height: 75vh;
+  }
 }
 
 .projectCards {
-  $min-card-width: 320px;
+  $min-card-width: 350px;
 
   display: grid;
   gap: 1.5rem;
@@ -20,8 +23,8 @@
     grid-template-columns: repeat(auto-fit, minmax($min-card-width, 1fr));
   }
 
-  @include min-breakpoint(xl) {
-    gap: 2.5rem;
+  @include min-breakpoint(xxl) {
+    gap: 3rem;
   }
 }
 
@@ -29,4 +32,8 @@
   background-color: var(--card-background-color);
   padding: 1.5em;
   border-radius: $border-radius;
+
+  @include min-breakpoint(sm) {
+    padding: 2.5em;
+  }
 }

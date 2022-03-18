@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="445" viewBox="0 0 620 445">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: var(--window-shadow);
+      }
+
+      .cls-2 {
+        fill: var(--window-background);
+      }
+
+      .cls-10, .cls-3, .cls-4, .cls-5, .cls-7, .cls-8 {
+        fill: none;
+      }
+
+      .cls-3, .cls-4, .cls-7, .cls-8 {
+        stroke: var(--window-buttons);
+        stroke-linecap: round;
+      }
+
+      .cls-3, .cls-8 {
+        stroke-linejoin: round;
+      }
+
+      .cls-3, .cls-4 {
+        stroke-width: 20px;
+        stroke: var(--window-content);
+      }
+
+      .cls-5 {
+        stroke: var(--window-border);
+        stroke-width: 10px;
+      }
+
+      .cls-6 {
+        fill: var(--window-border);
+      }
+
+      .cls-7, .cls-8 {
+        stroke-width: 5px;
+      }
+
+      .cls-9 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="window" transform="translate(-1171 -344)">
+    <rect id="shadow" class="cls-1" width="600" height="425" rx="10" transform="translate(1191 364)"/>
+    <g id="body">
+      <path id="container" class="cls-2" d="M0,0H600a0,0,0,0,1,0,0V308a10,10,0,0,1-10,10H10A10,10,0,0,1,0,308V0A0,0,0,0,1,0,0Z" transform="translate(1171 451)"/>
+      <g id="code" transform="translate(1355 552)">
+        <path id="right" class="cls-3" d="M6650.808,518.773c-.064.034,57.643,57.643,57.643,57.643l-57.643,57.643" transform="translate(-6453.935 -518.773)"/>
+        <path id="middle" class="cls-4" d="M6750.663,634.233l67.355-114.258" transform="translate(-6668.583 -518.947)"/>
+        <path id="left" class="cls-3" d="M6708.452,518.773c.064.034-57.643,57.643-57.643,57.643l57.643,57.643" transform="translate(-6673.809 -518.773)"/>
+      </g>
+    </g>
+    <g id="container-2" data-name="container" class="cls-5" transform="translate(1171 344)">
+      <rect class="cls-9" width="600" height="425" rx="10"/>
+      <rect class="cls-10" x="5" y="5" width="590" height="415" rx="5"/>
+    </g>
+    <g id="header">
+      <path id="container-3" data-name="container" class="cls-6" d="M10,0H590a10,10,0,0,1,10,10v97a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V10A10,10,0,0,1,10,0Z" transform="translate(1171 344)"/>
+      <g id="buttons">
+        <g id="close">
+          <path id="Path_10" data-name="Path 10" class="cls-7" d="M7020.908,386.588l22.517,22.517" transform="translate(-5315)"/>
+          <path id="Path_11" data-name="Path 11" class="cls-7" d="M7043.425,386.588,7020.908,409.1" transform="translate(-5315)"/>
+        </g>
+        <g id="maximise" class="cls-8" transform="translate(1652 384)">
+          <rect class="cls-9" width="28" height="28"/>
+          <rect class="cls-10" x="2.5" y="2.5" width="23" height="23"/>
+        </g>
+        <line id="minimise" class="cls-7" x1="22" transform="translate(1604.092 397.5)"/>
+      </g>
+    </g>
+  </g>
+</svg>

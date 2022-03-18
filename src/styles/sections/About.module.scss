@@ -2,11 +2,15 @@
 @import '../utils/mixins';
 
 .section {
-  min-height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 4em 0;
+  padding: 2em 0 4em;
+
+  @include min-breakpoint(sm) {
+    padding: 4em 0;
+    min-height: 75vh;
+  }
 }
 
 .card {

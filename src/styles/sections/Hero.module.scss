@@ -1,7 +1,16 @@
+@import '../utils/mixins';
+
 .section {
-  min-height: 100vh;
   display: flex;
   align-items: center;
+  padding-top: 10em;
+  padding-bottom: 10em;
+  overflow: hidden;
+  position: relative;
+
+  @include min-breakpoint(sm) {
+    min-height: 100vh;
+  }
 }
 
 .tagline {
@@ -14,4 +23,54 @@
     display: inline-flex;
     vertical-align: text-bottom;
   }
+}
+
+.container {
+  display: grid;
+  gap: 3em;
+  align-items: center;
+  grid-auto-flow: column;
+}
+
+.textContainer {
+  @include min-breakpoint(lg) {
+    min-width: 500px;
+  }
+}
+
+.imageContainer {
+  justify-self: end;
+
+  svg {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    --window-border: var(--primary-light);
+    --window-buttons: var(--primary-dark);
+    --window-content: var(--primary);
+    --window-shadow: var(--primary-lightest);
+    --window-background: var(--background-color);
+  }
+
+  @include max-breakpoint(lg) {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+    left: 40%;
+    pointer-events: none;
+
+    svg {
+      width: auto;
+    }
+  }
+
+  @include max-breakpoint(730px) {
+    display: none;
+  }
+}
+
+:global(.dark-theme) .imageContainer svg {
+  --window-shadow: var(--primary-darkest);
+  --window-background: var(--card-background-color);
 }

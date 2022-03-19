@@ -17,18 +17,21 @@ $stacking-breakpoint: lg;
     --accent-color: #c6beff;
     --accent-color-rgb: 198, 190, 255;
     --accent-color-title: #9388df;
+    --accent-color-tint: #d6d1ff;
   }
 
   &.green {
     --accent-color: var(--secondary);
     --accent-color-rgb: var(--secondary-rgb);
     --accent-color-title: #73bb20;
+    --accent-color-tint: var(--secondary-light);
   }
 
   &.blue {
     --accent-color: #a7f5f5;
     --accent-color-rgb: 167, 245, 245;
     --accent-color-title: #10c1c1;
+    --accent-color-tint: #bbf0f0;
   }
 }
 
@@ -95,6 +98,7 @@ $stacking-breakpoint: lg;
 
 .buttonMain {
   --button-background: var(--accent-color);
+  --button-background-tint: var(--accent-color-tint);
 }
 
 .buttonLight {

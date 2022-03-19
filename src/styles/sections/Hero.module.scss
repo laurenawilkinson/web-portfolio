@@ -53,6 +53,11 @@
     --window-shadow: var(--primary-lightest);
     --window-background: var(--background-color);
   }
+  @include max-breakpoint(xxl) {
+    svg {
+      max-width: 500px;
+    }
+  }
 
   @include max-breakpoint(lg) {
     position: absolute;
@@ -64,6 +69,7 @@
     svg {
       width: auto;
       margin-top: 7%;
+      max-width: unset;
     }
   }
 

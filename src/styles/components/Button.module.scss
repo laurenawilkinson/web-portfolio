@@ -44,6 +44,7 @@
 .buttonMain {
   @include reset;
   --button-background: var(--primary);
+  --button-background-tint: var(--primary-light);
   --button-color: var(--primary-font-color);
   --button-height: 3em;
 
@@ -52,6 +53,11 @@
   height: var(--button-height);
   font-size: 0.9em;
   border-radius: $border-radius;
+  transition: background-color 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  &:hover {
+    --button-background: var(--button-background-tint);
+  }
 }
 
 .buttonLight {
@@ -68,6 +74,11 @@
   font-size: 0.9em;
   border-radius: $border-radius;
   color: var(--button-color-dark);
+  transition: background-color 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  &:hover {
+    background-color: rgba(var(--button-background-rgb), 0.2);
+  }
 }
 
 :global(.dark-theme) {

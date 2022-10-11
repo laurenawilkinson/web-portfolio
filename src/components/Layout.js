@@ -11,6 +11,8 @@ const Layout = ({
   pageTitle = 'Lauren Wilkinson | Front-End Developer',
   children,
 }) => {
+  const socialImagePath = url + '/images/window-social.png?v=1'
+
   return (
     <main>
       <Helmet htmlAttributes={{ lang: 'en' }}>
@@ -56,19 +58,13 @@ const Layout = ({
         <meta property="og:url" content={url} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={metaDescription} />
-        <meta
-          property="og:image"
-          content={url + '/images/cherry-blossom-icon.png'}
-        />
+        <meta property="og:image" content={socialImagePath} />
         ( /* Twitter */ )
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={url} />
         <meta property="twitter:title" content={pageTitle} />
         <meta property="twitter:description" content={metaDescription} />
-        <meta
-          property="twitter:image"
-          content={url + '/images/cherry-blossom-icon.png'}
-        />
+        <meta property="twitter:image" content={socialImagePath} />
       </Helmet>
 
       <Header />

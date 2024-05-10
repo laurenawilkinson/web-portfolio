@@ -8,7 +8,7 @@ import {
 } from '../../styles/components/Button.module.scss'
 import * as styles from '../../styles/sections/Hero.module.scss'
 import Icon from '../utils/Icon'
-import WindowSvg from '../../assets/svg/window.svg'
+import AnimatedWindow from '../ui/AnimatedWindow'
 
 const Hero = () => {
   return (
@@ -34,7 +34,7 @@ const Hero = () => {
         </div>
 
         <div className={styles.imageContainer}>
-          <WindowSvg />
+          <AnimatedWindow />
         </div>
       </div>
     </section>

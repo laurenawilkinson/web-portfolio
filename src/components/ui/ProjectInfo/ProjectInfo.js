@@ -63,7 +63,7 @@ const ProjectInfo = ({ project, featured = false }) => {
               target="_blank"
               rel="noreferrer"
             >
-              {featured ? 'View Site' : 'Site'} <Icon>arrow_right_alt</Icon>
+              View <Icon>arrow_right_alt</Icon>
             </a>
           )}
 

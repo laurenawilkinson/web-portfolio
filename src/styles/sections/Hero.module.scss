@@ -8,12 +8,23 @@
   padding-bottom: 10em;
   overflow: hidden;
   position: relative;
+
+  @include max-breakpoint(md) {
+    --wrapper-padding: 2.5em;
+  }
+
+  h1 {
+    margin-bottom: 0.15em;
+  }
+
+  a {
+    margin-top: 1.75em;
+  }
 }
 
 .tagline {
   max-width: 19em;
   font-size: 1.35em;
-  margin-bottom: 0.75em;
   line-height: 1.3;
 
   img {

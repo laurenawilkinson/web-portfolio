@@ -27,6 +27,10 @@
   display: grid;
   gap: 2em;
 
+  @include max-breakpoint(md) {
+    --wrapper-padding: 2.5em;
+  }
+
   @include min-breakpoint(md) {
     grid-template-columns: auto 1fr;
   }

@@ -4,7 +4,7 @@ import { containerXl } from '../styles/utils/containers.module.scss'
 import { buttonPlain } from '../styles/components/Button.module.scss'
 import * as styles from '../styles/components/Header.module.scss'
 import ThemeToggleButton from './ThemeToggleButton'
-import { useInView, useTransition, animated, config } from '@react-spring/web'
+import { useTransition, animated, config } from '@react-spring/web'
 
 const Header = () => {
   const links = [
@@ -14,12 +14,7 @@ const Header = () => {
     { name: 'theme' },
   ]
 
-  const [linksRef, inView] = useInView({
-    once: true,
-    threshold: 0.5,
-  })
-
-  const transitions = useTransition(inView ? links : [], {
+  const transitions = useTransition(links, {
     from: { opacity: 0, translateY: 20 },
     enter: { opacity: 1, translateY: 0 },
     config: config.slow,
@@ -30,7 +25,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={containerXl}>
         <nav className={styles.nav}>
-          <ul className={styles.navLinks} ref={linksRef}>
+          <ul className={styles.navLinks}>
             {transitions((style, { name, link }) =>
               name === 'theme' ? (
                 <animated.li

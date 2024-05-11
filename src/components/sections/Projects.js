@@ -2,9 +2,9 @@ import * as React from 'react'
 import { containerXl } from '../../styles/utils/containers.module.scss'
 import { headingLg } from '../../styles/utils/typography.module.scss'
 import * as styles from '../../styles/sections/Projects.module.scss'
-import FeaturedProject from '../layout/FeaturedProject'
+import FeaturedProject from '../ui/FeaturedProject/FeaturedProject'
 import ProjectsData from '../../assets/data/Projects.json'
-import ProjectInfo from '../layout/ProjectInfo'
+import ProjectInfo from '../ui/ProjectInfo'
 
 const Projects = () => {
   const featuredProjects = ProjectsData.filter((p) => p.featured)
@@ -13,7 +13,11 @@ const Projects = () => {
   return (
     <>
       {featuredProjects.map((project, index) => (
-        <FeaturedProject project={project} key={index} />
+        <FeaturedProject
+          id={index === 0 ? 'projects' : `project-${index}`}
+          project={project}
+          key={index}
+        />
       ))}
       <section className={styles.section}>
         <div className={containerXl}>

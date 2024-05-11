@@ -13,7 +13,7 @@ import {
 } from '../../styles/utils/typography.module.scss'
 import * as styles from '../../styles/components/ProjectInfo.module.scss'
 import * as featuredStyles from '../../styles/components/FeaturedProject.module.scss'
-import TagList from './TagList'
+import TagList from '../layout/TagList'
 
 const ProjectInfo = ({ project = {}, featured = false }) => {
   const { name, description, tech, code, demo, upcoming } = project

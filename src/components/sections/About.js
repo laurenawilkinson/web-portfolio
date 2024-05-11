@@ -6,12 +6,31 @@ import {
 } from '../../styles/utils/typography.module.scss'
 import * as styles from '../../styles/sections/About.module.scss'
 import AboutMeTech from '../ui/AboutMeTech'
+import { useInView, animated, config } from '@react-spring/web'
 
 const About = () => {
+  const [ref, animation] = useInView(
+    () => ({
+      from: {
+        opacity: 0,
+        translateY: 50,
+      },
+      to: {
+        opacity: 1,
+        translateY: 0,
+      },
+      ...config.gentle,
+    }),
+    {
+      once: true,
+      threshold: 0.8,
+    }
+  )
+
   return (
     <section id="about" className={styles.section}>
       <div className={containerMd}>
-        <div className={styles.card}>
+        <animated.div className={styles.card} ref={ref} style={animation}>
           <h2 className={headingLg}>Hey!</h2>
 
           <p>
@@ -37,7 +56,7 @@ const About = () => {
             text="I'm currently learning"
             tags={['React Spring', 'Laravel', 'Decap CMS']}
           />
-        </div>
+        </animated.div>
       </div>
     </section>
   )

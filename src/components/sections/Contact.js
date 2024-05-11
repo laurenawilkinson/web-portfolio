@@ -8,6 +8,7 @@ import {
 } from '../../styles/components/Button.module.scss'
 import * as styles from '../../styles/sections/Contact.module.scss'
 import Icon from '../utils/Icon'
+import FadeIn from '../animations/FadeIn'
 
 const Contact = () => {
   const links = [
@@ -21,7 +22,7 @@ const Contact = () => {
 
   return (
     <footer id="contact" className={styles.section}>
-      <div className={cn(containerLg, styles.container)}>
+      <FadeIn className={cn(containerLg, styles.container)}>
         <div>
           <h2 className={cn(headingLg, styles.heading)}>Contact</h2>
           <p className={styles.textContainer}>
@@ -46,7 +47,7 @@ const Contact = () => {
             </li>
           ))}
         </ul>
-      </div>
+      </FadeIn>
     </footer>
   )
 }

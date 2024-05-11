@@ -1,21 +1,21 @@
 import * as React from 'react'
 import cn from 'classnames'
-import Icon from '../utils/Icon'
+import Icon from '../../utils/Icon'
 import {
   buttonMain,
   buttonLight,
   hasIconRight,
-} from '../../styles/components/Button.module.scss'
+} from '../../../styles/components/Button.module.scss'
 import {
   headingSm,
   headingLg,
   subHeading,
-} from '../../styles/utils/typography.module.scss'
-import * as styles from '../../styles/components/ProjectInfo.module.scss'
-import * as featuredStyles from '../../styles/components/FeaturedProject.module.scss'
-import TagList from '../layout/TagList'
+} from '../../../styles/utils/typography.module.scss'
+import * as styles from '../../../styles/components/ProjectInfo.module.scss'
+import * as featuredStyles from '../../../styles/components/FeaturedProject.module.scss'
+import TagList from '../../layout/TagList'
 
-const ProjectInfo = ({ project = {}, featured = false }) => {
+const ProjectInfo = ({ project, featured = false }) => {
   const { name, description, tech, code, demo, upcoming } = project
 
   return (

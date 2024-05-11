@@ -12,12 +12,13 @@ import {
 import * as styles from '../../styles/sections/Hero.module.scss'
 import Icon from '../utils/Icon'
 import AnimatedWindow from '../ui/AnimatedWindow'
+import FadeInLeft from '../animations/FadeInLeft'
 
 const Hero = () => {
   return (
     <section className={styles.section}>
       <div className={cn(containerXl, styles.container)}>
-        <div className={styles.textContainer}>
+        <FadeInLeft className={styles.textContainer}>
           <p className={subHeading}>Front End Developer</p>
           <h1 className={headingXl}>Lauren Wilkinson</h1>
 
@@ -34,7 +35,7 @@ const Hero = () => {
           <a className={cn(buttonMain, hasIconRight)} href="#projects">
             View Projects <Icon>arrow_right_alt</Icon>
           </a>
-        </div>
+        </FadeInLeft>
 
         <div className={styles.imageContainer}>
           <AnimatedWindow />

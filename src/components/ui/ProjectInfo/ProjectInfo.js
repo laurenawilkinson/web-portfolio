@@ -1,21 +1,21 @@
 import * as React from 'react'
 import cn from 'classnames'
-import Icon from '../utils/Icon'
+import Icon from '../../utils/Icon'
 import {
   buttonMain,
   buttonLight,
   hasIconRight,
-} from '../../styles/components/Button.module.scss'
+} from '../../../styles/components/Button.module.scss'
 import {
   headingSm,
   headingLg,
   subHeading,
-} from '../../styles/utils/typography.module.scss'
-import * as styles from '../../styles/components/ProjectInfo.module.scss'
-import * as featuredStyles from '../../styles/components/FeaturedProject.module.scss'
-import TagList from './TagList'
+} from '../../../styles/utils/typography.module.scss'
+import * as styles from '../../../styles/components/ProjectInfo.module.scss'
+import * as featuredStyles from '../../../styles/components/FeaturedProject.module.scss'
+import TagList from '../../layout/TagList'
 
-const ProjectInfo = ({ project = {}, featured = false }) => {
+const ProjectInfo = ({ project, featured = false }) => {
   const { name, description, tech, code, demo, upcoming } = project
 
   return (
@@ -37,7 +37,11 @@ const ProjectInfo = ({ project = {}, featured = false }) => {
       </div>
 
       <div>
-        <p>{description}</p>
+        <p
+          className={cn({ [featuredStyles.textSectionDescription]: featured })}
+        >
+          {description}
+        </p>
       </div>
 
       {upcoming && (
@@ -59,7 +63,7 @@ const ProjectInfo = ({ project = {}, featured = false }) => {
               target="_blank"
               rel="noreferrer"
             >
-              {featured ? 'View Site' : 'Site'} <Icon>arrow_right_alt</Icon>
+              View <Icon>arrow_right_alt</Icon>
             </a>
           )}
 

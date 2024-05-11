@@ -5,6 +5,7 @@ $stacking-breakpoint: lg;
 
 .section {
   display: grid;
+  overflow: hidden;
   --accent-color-text: black;
 
   @include min-breakpoint($stacking-breakpoint) {
@@ -41,35 +42,41 @@ $stacking-breakpoint: lg;
   align-items: center;
 }
 
+.backgroundColour {
+  background: var(--accent-color);
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  left: 0;
+  top: 0;
+
+  @include min-breakpoint($stacking-breakpoint) {
+    width: 80%;
+    height: 100%;
+  }
+}
+
 .imageSection {
-  background-image: linear-gradient(
-    180deg,
-    var(--accent-color) 0%,
-    var(--accent-color) 80%,
-    transparent 70%,
-    transparent 100%
-  );
   justify-content: center;
+  position: relative;
 
   @include max-breakpoint($stacking-breakpoint) {
     padding: 4em var(--wrapper-padding) 0;
   }
 
   @include min-breakpoint($stacking-breakpoint) {
-    background-image: linear-gradient(
-      90deg,
-      var(--accent-color) 0%,
-      var(--accent-color) 80%,
-      transparent 70%,
-      transparent 100%
-    );
     justify-content: flex-end;
   }
 
   img {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
     border-radius: $border-radius;
+    position: relative;
   }
+}
+
+.textSection {
+  overflow: hidden;
 }
 
 .textSectionWrapper {
@@ -84,6 +91,14 @@ $stacking-breakpoint: lg;
     padding-top: 0;
     padding-bottom: 0;
     max-width: 30em;
+
+    .textSectionDescription {
+      max-width: 25em;
+    }
+  }
+
+  h3 {
+    margin-bottom: 0.2em;
   }
 
   h4 {

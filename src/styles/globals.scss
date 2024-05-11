@@ -43,7 +43,7 @@
   --font-color: var(--black-light);
   --font-color-rgb: var(--black-light-rgb);
   --primary-font-color: #462e2e;
-  --card-background-color: #f3f3f3;
+  --card-background-color: #f7f7f7;
   --scrollbar-color: #d5d5d5;
 
   --wrapper-padding: #{$wrapper-padding};
@@ -62,7 +62,7 @@ body {
   font-family: $main-font-family;
   color: var(--font-color);
   font-size: 0.85rem;
-  line-height: 1.6;
+  line-height: 1.5;
 
   @include min-breakpoint(sm) {
     font-size: 1rem;

@@ -11,12 +11,11 @@
 .buttons {
   display: flex;
   align-items: center;
-  margin: 0.5em -0.5em -0.5em;
+  margin-top: 0.5em;
+  gap: 1em;
   flex-wrap: wrap;
 
   a {
-    margin: 0.5em;
-
     @include max-breakpoint(400px) {
       flex: 1;
     }

@@ -14,11 +14,25 @@
 }
 
 .card {
-  padding: 1.5em;
-  background-color: var(--card-background-color);
-  border-radius: $border-radius;
+  padding: 3em 1em;
+
+  .tagList {
+    margin-top: 0.5rem;
+  }
 
   @include min-breakpoint(sm) {
-    padding: 3em;
+    padding: 3em 3.5em 3.5em;
+    background-color: var(--card-background-color);
+    border-radius: 3em;
+  }
+}
+
+.tech {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+
+  > span::after {
+    content: '...';
   }
 }

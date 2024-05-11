@@ -1,7 +1,10 @@
 import * as React from 'react'
 import cn from 'classnames'
 import { containerXl } from '../../styles/utils/containers.module.scss'
-import { headingXl } from '../../styles/utils/typography.module.scss'
+import {
+  headingXl,
+  subHeading,
+} from '../../styles/utils/typography.module.scss'
 import {
   buttonMain,
   hasIconRight,
@@ -15,11 +18,11 @@ const Hero = () => {
     <section className={styles.section}>
       <div className={cn(containerXl, styles.container)}>
         <div className={styles.textContainer}>
+          <p className={subHeading}>Front End Developer</p>
           <h1 className={headingXl}>Lauren Wilkinson</h1>
 
           <p className={styles.tagline}>
-            Front-End Developer with a focus on delivering aesthetic yet
-            accessible user experiences{' '}
+            Delivering aesthetic yet accessible user experiences{' '}
             <img
               src="/images/cherry-blossom-icon.png"
               alt=""

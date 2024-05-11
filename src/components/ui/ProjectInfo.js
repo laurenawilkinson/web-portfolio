@@ -37,7 +37,11 @@ const ProjectInfo = ({ project = {}, featured = false }) => {
       </div>
 
       <div>
-        <p>{description}</p>
+        <p
+          className={cn({ [featuredStyles.textSectionDescription]: featured })}
+        >
+          {description}
+        </p>
       </div>
 
       {upcoming && (

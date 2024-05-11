@@ -87,6 +87,10 @@ $stacking-breakpoint: lg;
     padding-top: 0;
     padding-bottom: 0;
     max-width: 30em;
+
+    .textSectionDescription {
+      max-width: 25em;
+    }
   }
 
   h4 {

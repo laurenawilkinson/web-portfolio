@@ -20,10 +20,6 @@
 .card {
   padding: 3em 1em;
 
-  .tagList {
-    margin-top: 0.5rem;
-  }
-
   @include min-breakpoint(sm) {
     padding: 3em 3.5em 3.5em;
     background-color: var(--card-background-color);
@@ -35,6 +31,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.35em;
+  margin-top: 1.25em;
 
   > span::after {
     content: '...';

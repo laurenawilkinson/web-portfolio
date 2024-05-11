@@ -4,10 +4,10 @@ import * as styles from '../../styles/sections/About.module.scss'
 
 const AboutMeTech = ({ tags, text }) => {
   return (
-    <p className={styles.tech}>
+    <div className={styles.tech}>
       <span>{text}</span>
       <TagList items={tags} />
-    </p>
+    </div>
   )
 }
 

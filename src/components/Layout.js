@@ -1,14 +1,13 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
 import '../styles/globals.scss'
-import Header from './Header'
 
 const url = 'https://laurenwilkinson.co.uk'
 const metaDescription =
-  'Front-End Developer with a focus on delivering aesthetic yet accessible user experiences'
+  'Front End Developer with a focus on delivering aesthetic yet accessible user experiences'
 
 const Layout = ({
-  pageTitle = 'Lauren Wilkinson | Front-End Developer',
+  pageTitle = 'Lauren Wilkinson | Front End Developer',
   children,
 }) => {
   const socialImagePath = url + '/images/window-social.png?v=1'
@@ -66,8 +65,6 @@ const Layout = ({
         <meta property="twitter:description" content={metaDescription} />
         <meta property="twitter:image" content={socialImagePath} />
       </Helmet>
-
-      <Header />
 
       {children}
     </main>

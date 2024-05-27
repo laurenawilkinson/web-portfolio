@@ -38,10 +38,12 @@ const ProjectInfo = ({ project, featured = false }) => {
 
       <div>
         <p
-          className={cn({ [featuredStyles.textSectionDescription]: featured })}
-        >
-          {description}
-        </p>
+          className={cn(
+            { [featuredStyles.textSectionDescription]: featured },
+            styles.description
+          )}
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
       </div>
 
       {upcoming && (

@@ -22,7 +22,12 @@ const FeaturedProjectImage = ({ image, name }) => {
 
   return (
     <animated.figure ref={ref} style={animation}>
-      <img src={`/images/projects/${image}`} alt={name} />
+      <img
+        src={`/images/projects/${image}`}
+        alt={name}
+        width="450"
+        height="330"
+      />
     </animated.figure>
   )
 }

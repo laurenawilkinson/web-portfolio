@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&family=Fira+Code:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&family=Fira+Code:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
 @import './utils/variables';
 @import './utils/mixins';
@@ -23,10 +23,6 @@
   --secondary-rgb: 197, 225, 165;
   --secondary-light: #d4e9be;
   --secondary-dark: #94af76;
-
-  --tertiary: #80deea;
-  --tertiary-light: #b4ffff;
-  --tertiary-dark: #4bacb8;
 
   --white: #ffffff;
   --white-dark: #d9d9d9;

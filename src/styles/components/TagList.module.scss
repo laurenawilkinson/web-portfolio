@@ -16,8 +16,8 @@
 }
 
 .listItem {
-  --tag-background: rgba(var(--font-color-rgb), 0.1);
-  --tag-color: rgba(var(--font-color-rgb), 0.6);
+  --tag-background: light-dark(#e4e4e4, #333);
+  --tag-color: light-dark(#7d7d7e, #969696);
   padding: 0.25em 1em;
   border-radius: 3em;
   background-color: var(--tag-background);

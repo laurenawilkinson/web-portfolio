@@ -61,8 +61,14 @@
     --window-border: var(--primary-light);
     --window-buttons: var(--primary-dark);
     --window-content: var(--primary);
-    --window-shadow: var(--primary-lightest);
-    --window-background: var(--background-color);
+    --window-shadow: light-dark(
+      var(--primary-lightest),
+      var(--primary-darkest)
+    );
+    --window-background: light-dark(
+      var(--background-color),
+      var(--card-background-color)
+    );
   }
   @include max-breakpoint(xxl) {
     svg {
@@ -87,9 +93,4 @@
   @include max-breakpoint(sm) {
     display: none;
   }
-}
-
-:global(.dark-theme) .imageContainer svg {
-  --window-shadow: var(--primary-darkest);
-  --window-background: var(--card-background-color);
 }

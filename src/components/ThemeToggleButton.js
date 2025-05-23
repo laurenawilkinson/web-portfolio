@@ -10,20 +10,27 @@ const getTheme = () => {
 const ThemeToggleButton = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
 
-  const setDarkTheme = (isDarkTheme = false) => {
-    localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light')
+  const setDarkThemeLocally = (isDark) => {
+    localStorage.setItem('theme', isDark ? 'dark' : 'light')
 
-    isDarkTheme
-      ? document.body.classList.add('dark-theme')
-      : document.body.classList.remove('dark-theme')
+    setDarkTheme(isDark)
+  }
 
-    setIsDarkTheme(isDarkTheme)
+  const setDarkTheme = (isDark) => {
+    if (isDark) {
+      document.body.classList.add('dark-theme')
+      document.body.classList.remove('light-theme')
+    } else {
+      document.body.classList.remove('dark-theme')
+      document.body.classList.add('light-theme')
+    }
+
+    setIsDarkTheme(isDark)
   }
 
   const toggleState = () => {
-    const newState = !isDarkTheme
-
-    setDarkTheme(newState)
+    // Set theme in LS as it was an intentional change
+    setDarkThemeLocally(!isDarkTheme)
   }
 
   useEffect(() => {
@@ -36,9 +43,9 @@ const ThemeToggleButton = () => {
     // If no stored theme, attempt to use device theme
     if (window.matchMedia) {
       if (window.matchMedia('(prefers-color-scheme: dark)').matches)
-        setDarkTheme(true)
+        setIsDarkTheme(true)
       else if (window.matchMedia('(prefers-color-scheme: light)').matches)
-        setDarkTheme(false)
+        setIsDarkTheme(false)
     }
   }, [])
 

@@ -33,18 +33,18 @@
   --black-light-rgb: 57, 57, 59;
   --black-dark: #111111;
 
-  --background-color: var(--white);
+  --background-color: light-dark(var(--white), var(--black-dark));
   --nav-link-color: var(--primary);
-  --heading-font-color: var(--black);
-  --font-color: var(--black-light);
-  --font-color-rgb: var(--black-light-rgb);
+  --heading-font-color: light-dark(var(--black), var(--white));
+  --font-color: light-dark(var(--black-light), var(--white-dark));
   --primary-font-color: #462e2e;
-  --card-background-color: #f7f7f7;
-  --scrollbar-color: #d5d5d5;
+  --card-background-color: light-dark(#f7f7f7, #202020);
+  --scrollbar-color: light-dark(#d5d5d5, #555);
 
   --wrapper-padding: #{$wrapper-padding};
 
   font-size: $base-font-size;
+  color-scheme: light dark;
 }
 
 html {
@@ -64,13 +64,12 @@ body {
     font-size: 1rem;
   }
 
+  &.light-theme {
+    color-scheme: light;
+  }
+
   &.dark-theme {
-    --background-color: var(--black-dark);
-    --heading-font-color: var(--white);
-    --font-color: var(--white-dark);
-    --font-color-rgb: var(--white-dark-rgb);
-    --card-background-color: #202020;
-    --scrollbar-color: rgb(85, 85, 85);
+    color-scheme: dark;
   }
 
   ::selection {

@@ -39,6 +39,26 @@
     content: '>';
     margin-right: 0.5em;
   }
+
+  &::after {
+    content: '_';
+    animation: blink 0.75s linear infinite;
+
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 1;
+      }
+      51% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  }
 }
 
 .primaryText {

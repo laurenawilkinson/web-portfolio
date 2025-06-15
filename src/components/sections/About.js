@@ -6,6 +6,7 @@ import {
 } from '../../styles/utils/typography.module.scss'
 import * as styles from '../../styles/sections/About.module.scss'
 import AboutMeTech from '../ui/AboutMe/AboutMeTech'
+import AboutMeTitleText from '../ui/AboutMe/AboutMeTitleText'
 import { useInView, animated, config } from '@react-spring/web'
 
 const About = () => {
@@ -32,7 +33,9 @@ const About = () => {
     <section id="about" className={styles.section}>
       <div className={containerMd}>
         <animated.div className={styles.card} ref={ref} style={animation}>
-          <h2 className={headingLg}>Hey!</h2>
+          <h2 className={headingLg}>
+            <AboutMeTitleText />
+          </h2>
 
           <p>
             I'm <strong className={primaryText}>Lauren</strong>, a web developer

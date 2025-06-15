@@ -1,9 +1,11 @@
-module.exports = {
+import type { GatsbyConfig } from 'gatsby'
+
+const config: GatsbyConfig = {
   siteMetadata: {
-    siteUrl: `https://laurenwilkinson.co.uk`,
+    siteUrl: 'https://laurenwilkinson.co.uk',
   },
   plugins: [
-    `gatsby-plugin-sass`,
+    'gatsby-plugin-sass',
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
@@ -21,3 +23,5 @@ module.exports = {
     },
   ],
 }
+
+export default config

@@ -1,5 +1,16 @@
 [
   {
+    "name": "Chat Room",
+    "featured": true,
+    "description": "WebSocket driven real-time messaging platform. With profile customisation, Tenor GIF keyboard integration, content moderation and more!",
+    "tech": ["Node.js", "Express", "TypeScript", "Vue", "Sass"],
+    "colour": "blue",
+    "image": "ChatRoom.png",
+    "code": "https://github.com/laurenawilkinson/chat-room",
+    "demo": "https://chat-room.laurenwilkinson.co.uk/"
+  },
+
+  {
     "name": "Digital Bullet Journal",
     "featured": true,
     "description": "Progressive Web App that aims to capture the user experience of the paper-based \"Bullet Journal\" planning system digitally.",
@@ -11,25 +22,14 @@
   },
 
   {
-    "name": "Organic Fruit Farm",
+    "name": "Organic Farm Shop",
     "featured": true,
-    "description": "Digital storefront designed and developed for a fictional organic fruit-and-veg company.",
+    "description": "E-commerce platform designed and developed for a fictional organic fruit-and-veg company.",
     "tech": ["Vue", "Sass", "Wordpress API"],
     "colour": "green",
     "image": "McintireFruit.png",
     "code": "https://github.com/laurenawilkinson/mcintire-fruit",
     "demo": "https://organic-fruit.laurenwilkinson.co.uk/"
-  },
-
-  {
-    "name": "Chat Room",
-    "featured": true,
-    "description": "Fully featured websocket driven chat room, successor to <a href=\"https://github.com/laurenawilkinson/meow-meow-chat\" target=\"_blank\">Meow Meow Chat</a>.",
-    "tech": ["Vue", "Node.js", "Express"],
-    "colour": "blue",
-    "image": "ChatRoom.png",
-    "code": "https://github.com/laurenawilkinson/chat-room",
-    "demo": "https://chat-room.laurenwilkinson.co.uk/"
   },
 
   {

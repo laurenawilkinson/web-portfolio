@@ -72,11 +72,48 @@ $stacking-breakpoint: lg;
     justify-content: flex-end;
   }
 
-  img {
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-    border-radius: $border-radius;
+  figure {
     position: relative;
-    height: auto;
+    cursor: pointer;
+
+    img {
+      box-shadow: 0 0 30px rgba(var(--accent-color-rgb), 0.75);
+      border-radius: $border-radius;
+      position: relative;
+      height: auto;
+    }
+
+    @include min-breakpoint($stacking-breakpoint) {
+      $offset: 0.5rem;
+
+      img,
+      &::before {
+        transition: transform 0.15s ease-out;
+      }
+
+      img {
+        transform: translate($offset, -$offset);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--accent-color-title);
+        border-radius: $border-radius;
+        transform: translate(-$offset, $offset);
+      }
+
+      &:hover {
+        img,
+        &::before {
+          transform: translate(0, 0);
+        }
+      }
+    }
   }
 }
 

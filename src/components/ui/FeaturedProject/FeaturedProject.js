@@ -8,13 +8,15 @@ import FeaturedProjectImage from './FeaturedProjectImage'
 import FadeInLeft from '../../animations/FadeInLeft'
 
 const FeaturedProject = ({ project, id }) => {
-  const { image, colour, name } = project
+  const { image, colour, name, demo } = project
 
   return (
     <section id={id} className={cn(styles.section, styles[colour])}>
       <div className={styles.imageSection}>
         <FeaturedProjectBackground />
-        <FeaturedProjectImage image={image} name={name} />
+        <a href={demo} target="_blank" rel="noreferrer">
+          <FeaturedProjectImage image={image} name={name} />
+        </a>
       </div>
       <div className={cn(containerSm, styles.textSection)}>
         <FadeInLeft>

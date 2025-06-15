@@ -5,6 +5,7 @@ import Hero from '../components/sections/Hero'
 import About from '../components/sections/About'
 import Projects from '../components/sections/Projects'
 import Contact from '../components/sections/Contact'
+import SharedHead from '../components/SharedHead'
 
 const IndexPage = () => {
   return (
@@ -16,6 +17,10 @@ const IndexPage = () => {
       <Contact />
     </Layout>
   )
+}
+
+export function Head() {
+  return <SharedHead />
 }
 
 export default IndexPage

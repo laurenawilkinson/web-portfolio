@@ -5,7 +5,7 @@ import {
   primaryText,
 } from '../../styles/utils/typography.module.scss'
 import * as styles from '../../styles/sections/About.module.scss'
-import AboutMeTech from '../ui/AboutMeTech'
+import AboutMeTech from '../ui/AboutMe/AboutMeTech'
 import { useInView, animated, config } from '@react-spring/web'
 
 const About = () => {
@@ -26,6 +26,7 @@ const About = () => {
       threshold: 0.8,
     }
   )
+  const yearCount = new Date().getFullYear() - 2019
 
   return (
     <section id="about" className={styles.section}>
@@ -36,8 +37,8 @@ const About = () => {
           <p>
             I'm <strong className={primaryText}>Lauren</strong>, a web developer
             and UX enthusiast with over{' '}
-            <strong className={primaryText}>five years</strong> of professional
-            experience working within the front-end space.
+            <strong className={primaryText}>{yearCount} years</strong> of
+            professional experience working within the front-end space.
           </p>
 
           <AboutMeTech
@@ -54,7 +55,7 @@ const About = () => {
           />
           <AboutMeTech
             text="I'm currently learning"
-            tags={['React Spring', 'Laravel', 'Decap CMS']}
+            tags={['Astro', 'Laravel', 'Decap CMS']}
           />
         </animated.div>
       </div>

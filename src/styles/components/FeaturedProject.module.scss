@@ -116,6 +116,11 @@ $stacking-breakpoint: lg;
 
 .textSection {
   overflow: hidden;
+
+  @include max-breakpoint($stacking-breakpoint) {
+    @include container($wrapper-width-sm);
+    justify-content: center;
+  }
 }
 
 .textSectionWrapper {
@@ -124,12 +129,12 @@ $stacking-breakpoint: lg;
   height: unset;
   align-items: center;
   grid-template-rows: repeat(3, auto);
+  max-width: 30em;
 
   @include min-breakpoint($stacking-breakpoint) {
     padding-left: 0;
     padding-top: 0;
     padding-bottom: 0;
-    max-width: 30em;
 
     .textSectionDescription {
       max-width: 25em;

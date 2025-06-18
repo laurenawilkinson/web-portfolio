@@ -18,7 +18,7 @@ const FeaturedProject = ({ project, id }) => {
           <FeaturedProjectImage image={image} name={name} />
         </a>
       </div>
-      <div className={cn(containerSm, styles.textSection)}>
+      <div className={styles.textSection}>
         <FadeInLeft>
           <ProjectInfo project={project} featured={true} />
         </FadeInLeft>

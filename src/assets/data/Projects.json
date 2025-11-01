@@ -13,7 +13,7 @@
   {
     "name": "Digital Bullet Journal",
     "featured": true,
-    "description": "Progressive Web App that aims to capture the user experience of the paper-based \"Bullet Journal\" planning system digitally.",
+    "description": "Progressive Web App that captures the user experience of the paper-based \"Bullet Journal\" planning system digitally.",
     "tech": ["Vue", "Sass", "IndexedDB", "Canvas"],
     "colour": "purple",
     "image": "DigitalBulletJournal.png",

@@ -46,7 +46,7 @@ const About = () => {
 
           <AboutMeTech
             text="I work daily with"
-            tags={['React', 'TypeScript', 'Styled Components']}
+            tags={['React', 'TypeScript', 'Tailwind']}
           />
           <AboutMeTech
             text="For personal projects, my go-to stack is"
@@ -58,7 +58,7 @@ const About = () => {
           />
           <AboutMeTech
             text="I'm currently learning"
-            tags={['Astro', 'Laravel', 'Decap CMS']}
+            tags={['Astro', 'NestJS', 'Prisma']}
           />
         </animated.div>
       </div>

@@ -55,6 +55,6 @@
     "featured": false,
     "upcoming": true,
     "description": "Create a profile to share your gift preferences, clothing sizes and wishlists with your friends and family.",
-    "tech": ["Vue", "Sass", "TypeScript", "Laravel"]
+    "tech": ["Vue", "TypeScript", "NestJS", "Prisma"]
   }
 ]

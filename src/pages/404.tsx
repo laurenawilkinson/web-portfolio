@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import Layout from '../components/Layout'
 import { Link } from 'gatsby'
 import { containerSm } from '../styles/utils/containers.module.scss'
@@ -8,7 +8,7 @@ import { headingXl } from '../styles/utils/typography.module.scss'
 import cn from 'classnames'
 import SharedHead from '../components/SharedHead'
 
-const NotFoundPage = () => {
+const NotFoundPage: React.FC = () => {
   return (
     <Layout>
       <div className={cn(containerSm, styles.container)}>

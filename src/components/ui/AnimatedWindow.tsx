@@ -1,8 +1,8 @@
-import * as React from 'react'
+import React from 'react'
 import WindowSvg from '../../assets/svg/window.svg'
 import { useSpring, animated, useChain, useSpringRef } from '@react-spring/web'
 
-const AnimatedWindow = () => {
+const AnimatedWindow: React.FC = () => {
   const scaleOpacityRef = useSpringRef()
   const bobRef = useSpringRef()
 

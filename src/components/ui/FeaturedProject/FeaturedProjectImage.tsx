@@ -1,7 +1,15 @@
 import React from 'react'
 import { animated, useInView, config } from '@react-spring/web'
 
-const FeaturedProjectImage = ({ image, name }) => {
+interface FeaturedProjectImageProps {
+  image: string
+  name: string
+}
+
+const FeaturedProjectImage: React.FC<FeaturedProjectImageProps> = ({
+  image,
+  name,
+}) => {
   const [ref, animation] = useInView(
     () => ({
       from: {
@@ -16,7 +24,7 @@ const FeaturedProjectImage = ({ image, name }) => {
     }),
     {
       once: true,
-      threshold: 0.5,
+      amount: 0.5,
     }
   )
 

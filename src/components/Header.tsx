@@ -1,13 +1,14 @@
-import * as React from 'react'
+import React from 'react'
 import cn from 'classnames'
 import { containerXl } from '../styles/utils/containers.module.scss'
 import { buttonPlain } from '../styles/components/Button.module.scss'
 import * as styles from '../styles/components/Header.module.scss'
 import ThemeToggleButton from './ThemeToggleButton'
 import { useTransition, animated, config } from '@react-spring/web'
+import { NavLink } from '../types'
 
-const Header = () => {
-  const links = [
+const Header: React.FC = () => {
+  const links: NavLink[] = [
     { name: 'projects', link: '#projects' },
     { name: 'about', link: '#about' },
     { name: 'contact', link: '#contact' },

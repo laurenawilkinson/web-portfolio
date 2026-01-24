@@ -1,8 +1,13 @@
-import * as React from 'react'
+import React from 'react'
 import cn from 'classnames'
 import * as styles from '../../styles/components/TagList.module.scss'
 
-const TagList = ({ items = [], size = 'medium' }) => {
+interface TagListProps {
+  items?: string[]
+  size?: 'small' | 'medium' | 'large'
+}
+
+const TagList: React.FC<TagListProps> = ({ items = [], size = 'medium' }) => {
   return (
     <ul className={cn(styles.list, styles[size])}>
       {items.map((item, index) => (

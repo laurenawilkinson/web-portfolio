@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import cn from 'classnames'
 import { containerLg } from '../../styles/utils/containers.module.scss'
 import { headingLg } from '../../styles/utils/typography.module.scss'
@@ -10,7 +10,7 @@ import * as styles from '../../styles/sections/Contact.module.scss'
 import Icon from '../utils/Icon'
 import FadeIn from '../animations/FadeIn'
 
-const Contact = () => {
+const Contact: React.FC = () => {
   const links = [
     {
       name: 'email',
@@ -32,16 +32,14 @@ const Contact = () => {
         </div>
 
         <ul className={styles.links}>
-          {links.map(({ link, name, icon, image }, i) => (
-            <li className={styles.link} key={i}>
+          {links.map(({ link, name }) => (
+            <li className={styles.link} key={name}>
               <a
                 className={cn(buttonPlain, hasIconLeft, styles.buttonLink)}
                 href={link}
                 target={name === 'email' ? '' : '_blank'}
                 rel="noreferrer"
               >
-                {icon && <Icon>{icon}</Icon>}
-                {image && <img src={image} alt="" />}
                 {name}
               </a>
             </li>

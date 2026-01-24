@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { containerMd } from '../../styles/utils/containers.module.scss'
 import {
   headingLg,
@@ -9,7 +9,7 @@ import AboutMeTech from '../ui/AboutMe/AboutMeTech'
 import AboutMeTitleText from '../ui/AboutMe/AboutMeTitleText'
 import { useInView, animated, config } from '@react-spring/web'
 
-const About = () => {
+const About: React.FC = () => {
   const [ref, animation] = useInView(
     () => ({
       from: {
@@ -24,7 +24,7 @@ const About = () => {
     }),
     {
       once: true,
-      threshold: 0.8,
+      amount: 0.8,
     }
   )
   const yearCount = new Date().getFullYear() - 2019

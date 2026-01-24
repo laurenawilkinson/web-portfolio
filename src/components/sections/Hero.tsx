@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import cn from 'classnames'
 import { containerXl } from '../../styles/utils/containers.module.scss'
 import {
@@ -14,7 +14,7 @@ import Icon from '../utils/Icon'
 import AnimatedWindow from '../ui/AnimatedWindow'
 import FadeInLeft from '../animations/FadeInLeft'
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
     <section className={styles.section}>
       <div className={cn(containerXl, styles.container)}>

@@ -2,7 +2,7 @@ import React from 'react'
 import { animated, useInView, config } from '@react-spring/web'
 import { backgroundColour } from '../../../styles/components/FeaturedProject.module.scss'
 
-const FeaturedProjectBackground = () => {
+const FeaturedProjectBackground: React.FC = () => {
   const [ref, backgroundAnimation] = useInView(
     () => ({
       from: {
@@ -15,7 +15,7 @@ const FeaturedProjectBackground = () => {
     }),
     {
       once: true,
-      threshold: 0.5,
+      amount: 0.5,
     }
   )
 

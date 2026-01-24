@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { containerXl } from '../../styles/utils/containers.module.scss'
 import { headingLg } from '../../styles/utils/typography.module.scss'
 import * as styles from '../../styles/sections/Projects.module.scss'
@@ -7,14 +7,16 @@ import ProjectsData from '../../assets/data/Projects.json'
 import ProjectInfo from '../ui/ProjectInfo/ProjectInfo'
 import FadeInLeft from '../animations/FadeInLeft'
 import { useInView, useTransition, animated, config } from '@react-spring/web'
+import { Project } from '../../types'
 
-const Projects = () => {
-  const featuredProjects = ProjectsData.filter((p) => p.featured)
-  const otherProjects = ProjectsData.filter((p) => !p.featured)
+const Projects: React.FC = () => {
+  const projects: Project[] = ProjectsData
+  const featuredProjects = projects.filter((p) => p.featured)
+  const otherProjects = projects.filter((p) => !p.featured)
 
   const [projectsRef, inView] = useInView({
     once: true,
-    threshold: 0.5,
+    amount: 0.5,
   })
 
   const transitions = useTransition(inView ? otherProjects : [], {

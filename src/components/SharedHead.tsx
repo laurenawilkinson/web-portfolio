@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 
 const defaultPageTitle = 'Lauren Wilkinson | Front End Developer'
 const url = 'https://laurenwilkinson.co.uk'
@@ -6,7 +6,11 @@ const socialImagePath = url + '/images/window-social.png?v=1'
 const metaDescription =
   'Front End Developer with a focus on delivering aesthetic yet accessible user experiences'
 
-const SharedHead = ({ title = defaultPageTitle } = {}) => {
+interface SharedHeadProps {
+  title?: string
+}
+
+const SharedHead: React.FC<SharedHeadProps> = ({ title = defaultPageTitle }) => {
   return (
     <>
       <html lang="en" />

@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import cn from 'classnames'
 import Icon from '../../utils/Icon'
 import {
@@ -14,8 +14,17 @@ import {
 import * as styles from '../../../styles/components/ProjectInfo.module.scss'
 import * as featuredStyles from '../../../styles/components/FeaturedProject.module.scss'
 import TagList from '../../layout/TagList'
+import { Project } from '../../../types'
 
-const ProjectInfo = ({ project, featured = false }) => {
+interface ProjectInfoProps {
+  project: Project
+  featured?: boolean
+}
+
+const ProjectInfo: React.FC<ProjectInfoProps> = ({
+  project,
+  featured = false,
+}) => {
   const { name, description, tech, code, demo, upcoming } = project
 
   return (

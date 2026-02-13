@@ -22,14 +22,14 @@
   },
 
   {
-    "name": "Organic Farm Shop",
+    "name": "Daily Japanese Words",
     "featured": true,
-    "description": "E-commerce platform designed and developed for a fictional organic fruit-and-veg company.",
-    "tech": ["Vue", "Sass", "Wordpress API"],
-    "colour": "green",
-    "image": "McintireFruit.png",
-    "code": "https://github.com/laurenawilkinson/mcintire-fruit",
-    "demo": "https://organic-fruit.laurenwilkinson.co.uk/"
+    "description": "View a random selection of Japanese words each day, based on JLPT level.",
+    "tech": ["Preact", "Tailwind", "localStorage"],
+    "colour": "pink",
+    "image": "Tango.png",
+    "code": "https://github.com/laurenawilkinson/jlpt-words",
+    "demo": "https://tango.astralux.dev"
   },
 
   {
@@ -42,19 +42,18 @@
   },
 
   {
-    "name": "Blinkie Maker",
+    "name": "🛠 Blinkie Maker",
     "featured": false,
     "description": "Old-school blinkie maker with a drag-and-drop editor for creating pixel-themed GIFs.",
     "tech": ["Vue", "Sass", "Canvas"],
-    "code": "https://github.com/laurenawilkinson/blinkie-maker",
-    "demo": "https://blinkie-maker.laurenwilkinson.co.uk/"
+    "code": "https://github.com/laurenawilkinson/blinkie-maker"
   },
 
   {
     "name": "Gift Profile",
     "featured": false,
     "upcoming": true,
-    "description": "Create a profile to share your gift preferences, clothing sizes and wishlists with your friends and family.",
+    "description": "Share wishlists with your friends and family and get gift inspiration from other users.",
     "tech": ["Vue", "TypeScript", "NestJS", "Prisma"]
   }
 ]

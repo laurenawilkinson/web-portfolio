@@ -6,6 +6,10 @@ $stacking-breakpoint: lg;
 .section {
   display: grid;
   overflow: hidden;
+  --accent-color: var(--primary);
+  --accent-color-rgb: var(--primary-rgb);
+  --accent-color-title: var(--primary-dark);
+  --accent-color-tint: var(--primary-lighter);
   --accent-color-text: black;
 
   @include min-breakpoint($stacking-breakpoint) {
@@ -33,6 +37,13 @@ $stacking-breakpoint: lg;
     --accent-color-rgb: 156, 211, 243;
     --accent-color-title: #53aee2;
     --accent-color-tint: #beefff;
+  }
+
+  &.pink {
+    --accent-color: #ffa1ad;
+    --accent-color-rgb: 255, 161, 173;
+    --accent-color-title: oklch(0.712 0.194 13.428);
+    --accent-color-tint: #ffe4e6;
   }
 }
 

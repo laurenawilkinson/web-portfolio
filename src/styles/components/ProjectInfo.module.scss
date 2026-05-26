@@ -11,12 +11,11 @@
 .buttons {
   display: flex;
   align-items: center;
-  margin: 0.5em -0.5em -0.5em;
+  margin-top: 0.5em;
+  gap: 1em;
   flex-wrap: wrap;
 
   a {
-    margin: 0.5em;
-
     @include max-breakpoint(400px) {
       flex: 1;
     }
@@ -39,5 +38,12 @@
   i {
     font-size: 20px;
     margin-right: 0.25em;
+  }
+}
+
+.description {
+  a {
+    font-weight: 500;
+    border-bottom: 2px dashed;
   }
 }

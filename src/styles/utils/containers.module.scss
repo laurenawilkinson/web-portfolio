@@ -1,13 +1,5 @@
 @import '../utils/variables';
-
-@mixin container($size) {
-  width: 100%;
-  max-width: $size;
-  padding-left: var(--wrapper-padding);
-  padding-right: var(--wrapper-padding);
-  margin-left: auto;
-  margin-right: auto;
-}
+@import '../utils/mixins';
 
 .containerXl {
   @include container($wrapper-width-xl);

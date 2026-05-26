@@ -1,21 +1,30 @@
-import * as React from 'react'
+import React from 'react'
 import cn from 'classnames'
-import Icon from '../utils/Icon'
+import Icon from '../../utils/Icon'
 import {
   buttonMain,
   buttonLight,
   hasIconRight,
-} from '../../styles/components/Button.module.scss'
+} from '../../../styles/components/Button.module.scss'
 import {
   headingSm,
   headingLg,
   subHeading,
-} from '../../styles/utils/typography.module.scss'
-import * as styles from '../../styles/components/ProjectInfo.module.scss'
-import * as featuredStyles from '../../styles/components/FeaturedProject.module.scss'
-import TagList from './TagList'
+} from '../../../styles/utils/typography.module.scss'
+import * as styles from '../../../styles/components/ProjectInfo.module.scss'
+import * as featuredStyles from '../../../styles/components/FeaturedProject.module.scss'
+import TagList from '../../layout/TagList'
+import { Project } from '../../../types'
 
-const ProjectInfo = ({ project = {}, featured = false }) => {
+interface ProjectInfoProps {
+  project: Project
+  featured?: boolean
+}
+
+const ProjectInfo: React.FC<ProjectInfoProps> = ({
+  project,
+  featured = false,
+}) => {
   const { name, description, tech, code, demo, upcoming } = project
 
   return (
@@ -37,7 +46,13 @@ const ProjectInfo = ({ project = {}, featured = false }) => {
       </div>
 
       <div>
-        <p>{description}</p>
+        <p
+          className={cn(
+            { [featuredStyles.textSectionDescription]: featured },
+            styles.description
+          )}
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
       </div>
 
       {upcoming && (
@@ -59,7 +74,7 @@ const ProjectInfo = ({ project = {}, featured = false }) => {
               target="_blank"
               rel="noreferrer"
             >
-              {featured ? 'View Site' : 'Site'} <Icon>arrow_right_alt</Icon>
+              View <Icon>arrow_right_alt</Icon>
             </a>
           )}
 

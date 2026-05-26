@@ -1,60 +1,59 @@
 [
   {
+    "name": "Chat Room",
+    "featured": true,
+    "description": "WebSocket driven real-time messaging platform. With profile customisation, Tenor GIF keyboard integration, content moderation and more!",
+    "tech": ["Node.js", "Express", "TypeScript", "Vue", "Sass"],
+    "colour": "blue",
+    "image": "ChatRoom.png",
+    "code": "https://github.com/laurenawilkinson/chat-room",
+    "demo": "https://chat-room.laurenwilkinson.co.uk/"
+  },
+
+  {
     "name": "Digital Bullet Journal",
     "featured": true,
-    "description": "A PWA made for my Final Year Project, that aims to capture the user experience of the paper-based Bullet Journal planning system digitally.",
+    "description": "Progressive Web App that captures the user experience of the paper-based \"Bullet Journal\" planning system digitally.",
     "tech": ["Vue", "Sass", "IndexedDB", "Canvas"],
     "colour": "purple",
     "image": "DigitalBulletJournal.png",
     "code": "https://github.com/laurenawilkinson/bullet-journal",
-    "demo": "https://lw-bullet-journal.netlify.app/"
+    "demo": "https://bullet-journal.laurenwilkinson.co.uk/"
   },
 
   {
-    "name": "McIntire Fruit",
+    "name": "Daily Japanese Words",
     "featured": true,
-    "description": "A site designed and developed for a fictional organic fruit-and-veg company, using Vue and Wordpress REST API.",
-    "tech": ["Vue", "Sass", "Wordpress API"],
-    "colour": "green",
-    "image": "McintireFruit.png",
-    "code": "https://github.com/laurenawilkinson/mcintire-fruit",
-    "demo": "https://lw-mcintire-fruit.netlify.app/"
-  },
-
-  {
-    "name": "Meow Meow Chat",
-    "featured": true,
-    "description": "A cat-themed chat room created using websockets, a Node.js server and Vue.",
-    "tech": ["Vue", "Express", "Websockets", "Heroku"],
-    "colour": "blue",
-    "image": "MeowMeowChat.png",
-    "code": "https://github.com/laurenawilkinson/meow-meow-chat",
-    "demo": "https://meow-meow-chat.herokuapp.com/"
+    "description": "View a random selection of Japanese words each day, based on JLPT level.",
+    "tech": ["Preact", "Tailwind", "localStorage"],
+    "colour": "pink",
+    "image": "Tango.png",
+    "code": "https://github.com/laurenawilkinson/jlpt-words",
+    "demo": "https://tango.astralux.dev"
   },
 
   {
     "name": "To-Do To-Day",
     "featured": false,
-    "description": "A daily to-do list web application developed using React and styled using TailwindCSS.",
+    "description": "Simplified to-do list app where you can manage your tasks for the day.",
     "tech": ["React", "Tailwind", "localStorage"],
     "code": "https://github.com/laurenawilkinson/react-todo",
-    "demo": "https://to-do-to-day.netlify.app/"
+    "demo": "https://todo-today.laurenwilkinson.co.uk/"
   },
 
   {
-    "name": "Blinkie Maker",
+    "name": "🛠 Blinkie Maker",
     "featured": false,
-    "description": "An old-school blinkie maker where you can use a drag-and-drop editor to create a pixel-themed GIF.",
+    "description": "Old-school blinkie maker with a drag-and-drop editor for creating pixel-themed GIFs.",
     "tech": ["Vue", "Sass", "Canvas"],
-    "code": "https://github.com/laurenawilkinson/blinkie-maker",
-    "demo": "https://blinkie-maker.netlify.app/"
+    "code": "https://github.com/laurenawilkinson/blinkie-maker"
   },
 
   {
     "name": "Gift Profile",
     "featured": false,
     "upcoming": true,
-    "description": "Create a profile to share your gift preferences, clothing sizes and wishlists with your friends and family.",
-    "tech": ["React", "Sass", "Express", "Postgres", "Prisma", "TypeScript"]
+    "description": "Share wishlists with your friends and family and get gift inspiration from other users.",
+    "tech": ["Vue", "TypeScript", "NestJS", "Prisma"]
   }
 ]

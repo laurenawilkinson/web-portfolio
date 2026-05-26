@@ -5,6 +5,11 @@ $stacking-breakpoint: lg;
 
 .section {
   display: grid;
+  overflow: hidden;
+  --accent-color: var(--primary);
+  --accent-color-rgb: var(--primary-rgb);
+  --accent-color-title: var(--primary-dark);
+  --accent-color-tint: var(--primary-lighter);
   --accent-color-text: black;
 
   @include min-breakpoint($stacking-breakpoint) {
@@ -28,10 +33,17 @@ $stacking-breakpoint: lg;
   }
 
   &.blue {
-    --accent-color: #a7f5f5;
-    --accent-color-rgb: 167, 245, 245;
-    --accent-color-title: #10c1c1;
-    --accent-color-tint: #bbf0f0;
+    --accent-color: #9cd3f3;
+    --accent-color-rgb: 156, 211, 243;
+    --accent-color-title: #53aee2;
+    --accent-color-tint: #beefff;
+  }
+
+  &.pink {
+    --accent-color: #ffa1ad;
+    --accent-color-rgb: 255, 161, 173;
+    --accent-color-title: oklch(0.712 0.194 13.428);
+    --accent-color-tint: #ffe4e6;
   }
 }
 
@@ -41,34 +53,84 @@ $stacking-breakpoint: lg;
   align-items: center;
 }
 
+.backgroundColour {
+  background: var(--accent-color);
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  left: 0;
+  top: 0;
+
+  @include min-breakpoint($stacking-breakpoint) {
+    width: 80%;
+    height: 100%;
+  }
+}
+
 .imageSection {
-  background-image: linear-gradient(
-    180deg,
-    var(--accent-color) 0%,
-    var(--accent-color) 80%,
-    transparent 70%,
-    transparent 100%
-  );
   justify-content: center;
+  position: relative;
 
   @include max-breakpoint($stacking-breakpoint) {
     padding: 4em var(--wrapper-padding) 0;
   }
 
   @include min-breakpoint($stacking-breakpoint) {
-    background-image: linear-gradient(
-      90deg,
-      var(--accent-color) 0%,
-      var(--accent-color) 80%,
-      transparent 70%,
-      transparent 100%
-    );
     justify-content: flex-end;
   }
 
-  img {
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-    border-radius: $border-radius;
+  figure {
+    position: relative;
+    cursor: pointer;
+
+    img {
+      box-shadow: 0 0 30px rgba(var(--accent-color-rgb), 0.75);
+      border-radius: $border-radius;
+      position: relative;
+      height: auto;
+      user-select: none;
+    }
+
+    @include min-breakpoint($stacking-breakpoint) {
+      $offset: 0.5rem;
+
+      img,
+      &::before {
+        transition: transform 0.15s ease-out;
+      }
+
+      img {
+        transform: translate($offset, -$offset);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--accent-color-title);
+        border-radius: $border-radius;
+        transform: translate(-$offset, $offset);
+      }
+
+      &:hover {
+        img,
+        &::before {
+          transform: translate(0, 0);
+        }
+      }
+    }
+  }
+}
+
+.textSection {
+  overflow: hidden;
+
+  @include max-breakpoint($stacking-breakpoint) {
+    @include container($wrapper-width-sm);
+    justify-content: center;
   }
 }
 
@@ -78,16 +140,20 @@ $stacking-breakpoint: lg;
   height: unset;
   align-items: center;
   grid-template-rows: repeat(3, auto);
+  max-width: 30em;
 
   @include min-breakpoint($stacking-breakpoint) {
     padding-left: 0;
     padding-top: 0;
     padding-bottom: 0;
-    max-width: 30em;
+
+    .textSectionDescription {
+      max-width: 25em;
+    }
   }
 
-  h4 {
-    margin-bottom: 0.1em;
+  h3 {
+    margin-bottom: 0.25em;
   }
 }
 

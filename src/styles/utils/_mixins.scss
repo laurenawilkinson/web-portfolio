@@ -65,7 +65,6 @@
 }
 
 @mixin rounded-scrollbar($color, $border-width: 3px) {
-  scrollbar-width: thin;
   scrollbar-color: $color;
 
   &::-webkit-scrollbar {
@@ -81,4 +80,13 @@
     border: $border-width solid var(--background-color);
     border-radius: 10px;
   }
+}
+
+@mixin container($size) {
+  width: 100%;
+  max-width: $size;
+  padding-left: var(--wrapper-padding);
+  padding-right: var(--wrapper-padding);
+  margin-left: auto;
+  margin-right: auto;
 }

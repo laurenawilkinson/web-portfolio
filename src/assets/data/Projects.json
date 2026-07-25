@@ -22,10 +22,10 @@
   },
 
   {
-    "name": "Daily Japanese Words",
+    "name": "Tango Tab: Daily Japanese Words",
     "featured": true,
-    "description": "View a random selection of Japanese words each day, based on JLPT level.",
-    "tech": ["Preact", "Tailwind", "localStorage"],
+    "description": "A new tab browser extension with daily Japanese vocabulary (単語/tango) flashcards, based on your JLPT level.",
+    "tech": ["Preact", "Tailwind", "Browser Extension"],
     "colour": "pink",
     "image": "Tango.png",
     "code": "https://github.com/laurenawilkinson/jlpt-words",
@@ -36,7 +36,7 @@
     "name": "To-Do To-Day",
     "featured": false,
     "description": "Simplified to-do list app where you can manage your tasks for the day.",
-    "tech": ["React", "Tailwind", "localStorage"],
+    "tech": ["React", "Tailwind"],
     "code": "https://github.com/laurenawilkinson/react-todo",
     "demo": "https://todo-today.laurenwilkinson.co.uk/"
   },

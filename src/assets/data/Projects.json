@@ -1,15 +1,24 @@
 [
   {
+    "name": "Tango Tab: Daily Japanese Words",
+    "featured": true,
+    "description": "A new tab browser extension with daily Japanese vocabulary (単語/tango) flashcards, based on your JLPT level.",
+    "tech": ["Preact", "Tailwind", "Browser Extension"],
+    "colour": "pink",
+    "image": "Tango.png",
+    "code": "https://github.com/laurenawilkinson/jlpt-words",
+    "demo": "https://tango.astralux.dev"
+  },
+  {
     "name": "Chat Room",
     "featured": true,
-    "description": "WebSocket driven real-time messaging platform. With profile customisation, Tenor GIF keyboard integration, content moderation and more!",
+    "description": "WebSocket driven real-time messaging platform. With profile customisation, GIPHY GIF keyboard integration, content moderation and more!",
     "tech": ["Node.js", "Express", "TypeScript", "Vue", "Sass"],
     "colour": "blue",
     "image": "ChatRoom.png",
     "code": "https://github.com/laurenawilkinson/chat-room",
     "demo": "https://chat-room.laurenwilkinson.co.uk/"
   },
-
   {
     "name": "Digital Bullet Journal",
     "featured": true,
@@ -20,18 +29,6 @@
     "code": "https://github.com/laurenawilkinson/bullet-journal",
     "demo": "https://bullet-journal.laurenwilkinson.co.uk/"
   },
-
-  {
-    "name": "Tango Tab: Daily Japanese Words",
-    "featured": true,
-    "description": "A new tab browser extension with daily Japanese vocabulary (単語/tango) flashcards, based on your JLPT level.",
-    "tech": ["Preact", "Tailwind", "Browser Extension"],
-    "colour": "pink",
-    "image": "Tango.png",
-    "code": "https://github.com/laurenawilkinson/jlpt-words",
-    "demo": "https://tango.astralux.dev"
-  },
-
   {
     "name": "To-Do To-Day",
     "featured": false,
@@ -40,7 +37,6 @@
     "code": "https://github.com/laurenawilkinson/react-todo",
     "demo": "https://todo-today.laurenwilkinson.co.uk/"
   },
-
   {
     "name": "🛠 Blinkie Maker",
     "featured": false,
@@ -48,7 +44,6 @@
     "tech": ["Vue", "Sass", "Canvas"],
     "code": "https://github.com/laurenawilkinson/blinkie-maker"
   },
-
   {
     "name": "Gift Profile",
     "featured": false,

@@ -35,7 +35,7 @@ const Projects: React.FC = () => {
           key={index}
         />
       ))}
-      <section className={styles.section}>
+      {otherProjects.length > 0 && <section className={styles.section}>
         <div className={containerXl}>
           <FadeInLeft>
             <h2 className={headingLg}>More Projects</h2>
@@ -49,7 +49,7 @@ const Projects: React.FC = () => {
             ))}
           </ul>
         </div>
-      </section>
+      </section>}
     </>
   )
 }

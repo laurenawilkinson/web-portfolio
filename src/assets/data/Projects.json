@@ -28,27 +28,5 @@
     "image": "DigitalBulletJournal.png",
     "code": "https://github.com/laurenawilkinson/bullet-journal",
     "demo": "https://bullet-journal.laurenwilkinson.co.uk/"
-  },
-  {
-    "name": "To-Do To-Day",
-    "featured": false,
-    "description": "Simplified to-do list app where you can manage your tasks for the day.",
-    "tech": ["React", "Tailwind"],
-    "code": "https://github.com/laurenawilkinson/react-todo",
-    "demo": "https://todo-today.laurenwilkinson.co.uk/"
-  },
-  {
-    "name": "🛠 Blinkie Maker",
-    "featured": false,
-    "description": "Old-school blinkie maker with a drag-and-drop editor for creating pixel-themed GIFs.",
-    "tech": ["Vue", "Sass", "Canvas"],
-    "code": "https://github.com/laurenawilkinson/blinkie-maker"
-  },
-  {
-    "name": "Gift Profile",
-    "featured": false,
-    "upcoming": true,
-    "description": "Share wishlists with your friends and family and get gift inspiration from other users.",
-    "tech": ["Vue", "TypeScript", "NestJS", "Prisma"]
   }
 ]
